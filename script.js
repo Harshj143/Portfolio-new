@@ -112,9 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Available commands and their outputs
         const commands = {
-            'cat about_me.txt': `I'm passionate about AI and software engineering with a focus on creating impactful solutions. My journey began with my BTech degree where I excelled academically, and has continued at UW Bothell where I'm researching generative AI and content moderation technologies.
-
-I love tackling complex problems and building systems that make a difference. When I'm not coding, you can find me exploring new technologies or contributing to open-source projects.`,
+            'cat about_me.txt': `assionate about protecting organizations through offensive and defensive security. With hands-on experience in penetration testing, AI-powered phishing detection, and cloud security hardening, I aim to blend technical depth and innovation to create safer digital ecosystems. When not working on projects, I enjoy competing in CTFs and exploring the latest in AI security.`,
             'clear': 'CLEAR'
         };
 
@@ -597,7 +595,7 @@ I love tackling complex problems and building systems that make a difference. Wh
             chatMessages.innerHTML = `
                 <div class="message bot-message">
                     <div class="message-bubble">
-                        <span class="typing-text">Hey there! 👋 I'm Pragnya. What brings you here today?</span>
+                        <span class="typing-text">Hey there! 👋 I'm Harsh. What brings you here today?</span>
                     </div>
                     <span class="message-time">just now</span>
                 </div>
@@ -742,7 +740,7 @@ I love tackling complex problems and building systems that make a difference. Wh
                         .then(success => {
                             if (success) {
                                 setTimeout(() => {
-                                    addMessage("Message sent! Pragnya will get back to you within 24 hours. 📧", false, true, true);
+                                    addMessage("Message sent! Harsh will get back to you within 24 hours. 📧", false, true, true);
                                 }, 1000);
                             } else {
                                 setTimeout(() => {
