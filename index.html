@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Harsh Jannawar - Portfolio</title>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <!-- Meta Tags to Fix Impersonation Warning -->
+        <meta name="author" content="Harsh Jannawar">
+        <meta name="description" content="Harsh Jannawar - AI enthusiast and software engineer. Master's student in Cybersecurity Engineering at UW specializing in Cloud, VAPT, AI security and GRC.">
+        <meta name="keywords" content="Harsh Jannawar, AI Cybersecurity Engineering, Cloud Security, Penetration Testing, portfolio">
+        <meta name="robots" content="index, follow">
+        <meta name="revisit-after" content="1 month">
+        
+        <!-- Open Graph Meta Tags for Social Media -->
+        <meta property="og:title" content="Harsh Jannawar - Portfolio">
+        <meta property="og:description" content="AI and cybersecurity enthusiast building innovative solutions at the intersection of AI and real-world security.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://harshjannawar.me">
+        <meta property="og:site_name" content="Harsh Jannawar Portfolio">
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Harsh Jannawar - Portfolio">
+        <meta name="twitter:description" content="AI security and cybersecurity enthusiast crafting impactful solutions.">
+        
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://harshjannawar.me">
+        
+        <!-- Apple Specific Meta Tags -->
+        <meta name="apple-mobile-web-app-title" content="Harsh Jannawar">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        
+        <!-- Security Headers -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.emailjs.com;"> -->
+        
+        <!-- Favicon (add if you have one) -->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        
+        <!-- Your existing font links -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    </head>
+
+<body class="light-mode">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <!-- Theme toggle button -->
+        <div class="theme-toggle-container">
+            <span class="theme-label">Dark Mode</span>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">🌙</button>
+        </div>
+
+        <!-- Background elements -->
+        <div class="grid-background"></div>
+        <div class="accent-line"></div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <div class="content-grid">
+                <!-- Left side content -->
+                <div class="left-content">
+                    <div>
+                        <div class="badge">
+                            <span class="badge-dot"></span>
+                            Available for internships and Full-time opportunities
+                        </div>
+
+                        <h1 class="title">
+                            <span class="name-first">Pragnya</span>
+                            <span class="name-last">Ambekar</span>
+                        </h1>
+
+                        <div class="subtitle-container">
+                            <div class="subtitle">
+                                <span>I'm</span>
+                                <span id="typed-text" class="typed-text">
+                                    an AI enthusiast<span class="cursor-blink"></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="description">
+                            Master's student in Cybersecurity Engineering at UW Bothell, passionate about AI security, penetration testing, cloud security, and building resilient systems to safeguard critical infrastructure.
+                        </p>
+                    </div>
+
+                    <div class="button-container">
+                        <a href="#projects" class="primary-button">
+                            View Projects
+                            <span class="arrow-icon">→</span>
+                        </a>
+                        <a href="#contact" class="secondary-button">
+                            Get In Touch
+                        </a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com/Harshj143" target="_blank" rel="noreferrer"
+                            class="social-button-labeled github">
+                            <div class="icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </div>
+                            <span class="button-text">GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/harsh-jannawar" target="_blank" rel="noreferrer"
+                            class="social-button-labeled linkedin">
+                            <div class="icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                            </div>
+                            <span class="button-text">LinkedIn</span>
+                        </a>
+                        <a href="mailto:hjannawar@gmail.com" class="social-button-labeled gmail">
+                            <div class="icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068A1.485 1.485 0 0 1 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.068.432.27.268.432.643.432 1.068z" />
+                                </svg>
+                            </div>
+                            <span class="button-text">Gmail</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right side - Terminal-inspired component with simplified content -->
+                <div class="terminal-container">
+                    <div class="terminal-glow"></div>
+                    <div class="terminal">
+                        <!-- Terminal header -->
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <div class="terminal-button red"></div>
+                                <div class="terminal-button yellow"></div>
+                                <div class="terminal-button green"></div>
+                            </div>
+                            <div class="terminal-title">
+                                harsh@portfolio ~
+                            </div>
+                        </div>
+
+                        <!-- Terminal content - Simplified -->
+                        <div class="terminal-content">
+                            <div class="command-line">
+                                <span class="prompt">$</span>
+                                <span class="command">cat about_me.txt</span>
+                            </div>
+                            <div class="command-output about-me">Passionate about protecting organizations through offensive and defensive security. With hands-on experience in penetration testing, AI-powered phishing detection, and cloud security hardening, I aim to blend technical depth and innovation to create safer digital ecosystems. When not working on projects, I enjoy competing in CTFs and exploring the latest in AI security.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="scroll-indicator">
+            <span class="scroll-text">Scroll to explore</span>
+            <div class="scroll-arrow">↓</div>
+        </div> -->
+    </div>
+<!-- Skills Section -->
+<div class="section-divider"></div>
+<section id="skills" class="skills-section fade-in">
+    <div class="container">
+        <h2 class="section-title">My Skill Set</h2>
+        
+        <div class="tech-cards">
+            <!-- Python -->
+            <div class="tech-card">
+                <div class="tech-logo">
+                    <svg viewBox="0 0 128 128" width="32" height="32">
+                        <linearGradient id="python-gradient-0" gradientUnits="userSpaceOnUse" x1="63.391" y1="1.988" x2="63.391" y2="126.249">
+                            <stop offset="0" stop-color="#387EB8"/>
+                            <stop offset="1" stop-color="#366994"/>
+                        </linearGradient>
+                        <linearGradient id="python-gradient-1" gradientUnits="userSpaceOnUse" x1="62.827" y1="4.051" x2="62.827" y2="123.886">
+                            <stop offset="0" stop-color="#FFE873"/>
+                            <stop offset="1" stop-color="#FFD43B"/>
+                        </linearGradient>
+                        <path fill="url(#python-gradient-0)" d="M63.391 1.988c-3.922 0-7.717.326-11.25.919-10.452 1.755-12.346 5.707-12.346 12.824v9.394h24.696v3.125H40.295c-7.176 0-13.463 4.313-15.433 12.508-2.27 9.407-2.371 15.273 0 25.096 1.755 7.318 5.952 12.508 13.128 12.508h8.491V66.831c0-8.151 7.05-15.34 15.433-15.34h24.673c6.866 0 12.346-5.654 12.346-12.548V14.731c0-6.693-5.646-11.72-12.346-12.824-4.244-.7-8.645-.919-12.568-.919zM52.05 9.557c2.551 0 4.631 2.116 4.631 4.728 0 2.606-2.08 4.719-4.631 4.719-2.554 0-4.631-2.113-4.631-4.719 0-2.612 2.077-4.728 4.631-4.728z"/>
+                        <path fill="url(#python-gradient-1)" d="M95.212 31.37V42.56c0 8.504-7.208 15.655-15.433 15.655H55.106c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.627 12.346 12.547 7.816 2.297 15.312 2.713 24.673 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H67.452v-3.138h24.686c7.176 0 9.847-5.005 12.346-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.514-12.338-12.514h-9.273z"/>
+                    </svg>
+                </div>
+                <span class="tech-name">Python</span>
+            </div>
+            
+            <!-- React -->
+            <div class="tech-card">
+                <div class="tech-logo">
+                    <svg viewBox="0 0 128 128" width="32" height="32">
+                        <g fill="#61DAFB">
+                            <circle cx="64" cy="64" r="11.4"/>
+                            <path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.7 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.3-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.7-.5-7.3-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1 2 2.1 4.1 3.3 6.2 1.2 2.1 2.4 4.1 3.7 6zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.7-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.3 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.7.5 7.3 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM2.3 64c0-4.7 5.4-9.7 15.6-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 2.3 69.9 2.3 64zm28.8 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zm60.8-20.3c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"/>
+                        </g>
+                    </svg>
+                </div>
+                <span class="tech-name">React</span>
+            </div>
+            
+            <!-- Git -->
+            <div class="tech-card">
+                <div class="tech-logo">
+                    <svg viewBox="0 0 128 128" width="32" height="32">
+                        <path fill="#F34F29" d="M124.742 58.378l-55.117-55.114c-3.172-3.174-8.32-3.174-11.497 0L46.685 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314a9.66 9.66 0 012.293 9.993L87.362 55.47c3.722-1.283 7.891-.491 10.106 2.146a9.665 9.665 0 010 13.659 9.654 9.654 0 01-13.656 0 9.682 9.682 0 01-2.376-10.547l-13.062-13.064v34.414a9.71 9.71 0 012.56 1.78 9.65 9.65 0 010 13.658 9.654 9.654 0 01-13.656 0 9.654 9.654 0 010-13.658 9.654 9.654 0 014.095-2.608V50.36a9.642 9.642 0 01-4.095-2.608 9.724 9.724 0 01-2.271-10.404L41.082 22.835 3.076 60.836c-3.172 3.174-3.172 8.325 0 11.498l55.117 55.114c3.172 3.174 8.325 3.174 11.5 0l54.849-54.849a8.145 8.145 0 00.001-11.498z"/>
+                    </svg>
+                </div>
+                <span class="tech-name">Git</span>
+            </div>
+            
+            <!-- Machine Learning -->
+            <div class="tech-card">
+                <div class="tech-logo">
+                    <svg viewBox="0 0 128 128" width="32" height="32">
+                        <defs>
+                            <linearGradient id="tf-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff6f00;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ff8f00;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <g transform="scale(1.6) translate(16, 16)">
+                            <polygon fill="url(#tf-gradient)" points="0,0 17.5,0 35,30.25 17.5,60.5 0,60.5"/>
+                            <polygon fill="#eb844f" points="17.5,0 35,0 52.5,30.25 35,60.5 17.5,60.5"/>
+                            <polygon fill="#ffb300" points="35,0 52.5,0 52.5,30.25 35,30.25"/>
+                        </g>
+                        <text x="64" y="90" font-family="Arial, sans-serif" font-size="14" fill="#ff6f00" text-anchor="middle" font-weight="bold">ML</text>
+                    </svg>
+                </div>
+                <span class="tech-name">Machine Learning</span>
+            </div>
+            
+            <!-- AWS -->
+            <div class="tech-card">
+                <div class="tech-logo">
+                    <svg viewBox="0 0 128 128" width="32" height="32">
+                        <path fill="#232F3E" d="M36.7 66.5c0 1.8.2 3.3.5 4.3.4 1 .8 2.2 1.5 3.4.2.4.3.8.3 1.1 0 .5-.3.9-.9 1.3l-3 2c-.4.3-.8.4-1.1.4-.5 0-.9-.2-1.3-.7-.7-.8-1.3-1.6-1.7-2.4-.4-.8-.9-1.8-1.4-2.9-3.5 4.1-7.8 6.2-13.1 6.2-3.7 0-6.7-1.1-8.9-3.2-2.2-2.1-3.3-5-3.3-8.6 0-3.8 1.4-6.9 4.1-9.2 2.8-2.3 6.5-3.5 11.1-3.5 1.5 0 3.1.1 4.8.4 1.7.3 3.4.6 5.3 1.1v-3.7c0-3.9-.8-6.6-2.4-8.1-1.6-1.6-4.4-2.3-8.2-2.3-1.8 0-3.6.2-5.5.6-1.9.4-3.7 1-5.5 1.6-.8.3-1.4.5-1.7.6-.3.1-.6.2-.8.2-.7 0-1.1-.5-1.1-1.6v-2.5c0-.8.1-1.5.4-1.8.3-.4.7-.7 1.4-1 1.8-.9 3.9-1.6 6.4-2.2 2.5-.6 5.1-.9 8-.9 6.1 0 10.5 1.4 13.4 4.2 2.8 2.8 4.3 7.1 4.3 12.9v17zm-18.1 6.7c1.7 0 3.4-.3 5.2-.9 1.8-.6 3.5-1.7 4.9-3.2.8-1 1.5-2.1 1.9-3.3.4-1.3.5-2.8.5-4.7v-2.2c-1.4-.4-2.9-.7-4.5-.9-1.6-.2-3.1-.3-4.7-.3-3.3 0-5.8.7-7.4 2-1.6 1.3-2.4 3.2-2.4 5.7 0 2.3.6 4.1 1.8 5.2 1.2 1.2 3 1.6 5.3 1.6zm40.6 5.4c-.9 0-1.5-.2-1.9-.5-.4-.4-.7-1.1-.9-2.2L45.3 36.7c-.2-1-.3-1.7-.3-2.1 0-.8.4-1.3 1.2-1.3h4.6c.9 0 1.6.2 2 .5.4.4.7 1.1.9 2.2l7.9 31.3 7.4-31.3c.2-1 .5-1.8.9-2.2.4-.4 1.1-.5 2-.5h3.8c.9 0 1.6.2 2 .5.4.4.7 1.1.9 2.2l7.5 31.7 8.2-31.7c.2-1 .5-1.8.9-2.2.4-.4 1.1-.5 2-.5h4.4c.8 0 1.2.4 1.2 1.3 0 .3 0 .5-.1.8 0 .3-.1.7-.2 1.3L89.9 75.7c-.2 1-.5 1.8-.9 2.2-.4.4-1.1.5-1.9.5h-4c-.9 0-1.6-.2-2-.5-.4-.4-.7-1.1-1-2.2l-7.3-30.5-7.3 30.5c-.2 1-.5 1.8-.9 2.2-.4.4-1.1.5-2 .5h-4.2zM107.5 79.3c-2.5 0-5-.3-7.3-.9-2.3-.6-4.1-1.3-5.4-2-1.8-.9-2.8-1.9-2.8-3v-2.6c0-1.1.4-1.6 1.3-1.6.3 0 .7.1 1 .2.3.1.8.3 1.3.5 1.7.8 3.6 1.4 5.6 1.8 2 .4 4 .6 5.9.6 3.1 0 5.6-.6 7.3-1.7 1.7-1.1 2.6-2.8 2.6-4.9 0-1.5-.5-2.7-1.4-3.7-.9-1-2.7-1.9-5.3-2.7l-7.6-2.4c-3.8-1.2-6.6-3-8.4-5.3-1.7-2.3-2.6-4.9-2.6-7.6 0-2.2.5-4.1 1.4-5.8 1-1.6 2.3-3 3.9-4.2 1.6-1.1 3.5-2 5.6-2.6 2.1-.6 4.4-.9 6.8-.9 1.2 0 2.4.1 3.6.2 1.3.1 2.5.3 3.6.5 1.1.2 2.2.5 3.3.8 1.1.3 2 .7 2.8 1 .7.3 1.3.7 1.7 1 .4.3.6.8.6 1.4v2.4c0 1.1-.4 1.7-1.3 1.7-.5 0-1.2-.2-2.1-.6-3-1.4-6.4-2.1-10.1-2.1-2.8 0-5.1.5-6.7 1.4-1.6 1-2.5 2.5-2.5 4.6 0 1.5.5 2.7 1.6 3.8 1.1 1 2.9 2 5.6 2.9l7.5 2.4c3.8 1.2 6.5 2.9 8.1 5 1.6 2.1 2.4 4.5 2.4 7.2 0 2.3-.5 4.3-1.4 6-1 1.8-2.3 3.3-4 4.5-1.7 1.2-3.7 2.2-6 2.8-2.4.8-4.9 1.1-7.7 1.1z"/>
+                        <path fill="#FF9900" d="M119.6 90.3c-6.8 5-16.7 7.7-25.2 7.7-11.9 0-22.6-4.4-30.7-11.7-.6-.6-.1-1.4.7-.9 8.7 5.1 19.5 8.1 30.7 8.1 7.5 0 15.8-1.6 23.4-4.8 1.1-.5 2.1.7 1.1 1.6z"/>
+                        <path fill="#FF9900" d="M122.6 86.9c-.9-1.1-5.7-.5-7.9-.3-.7.1-.8-.5-.2-.9 3.9-2.7 10.2-1.9 10.9-.1.7 1.9-2 15-3.8 16.4-.6.4-1.1.2-1-.4.8-1.8 2.6-8.7 2-9.7z"/>
+                    </svg>
+                </div>
+                <span class="tech-name">AWS</span>
+            </div>
+            
+            <!-- SQL -->
+            <div class="tech-card">
+                <div class="tech-logo">
+                    <svg viewBox="0 0 128 128" width="32" height="32">
+                        <path fill="#00758F" d="M125.477 122.783l-2.616-2.537c-2.479-3.292-5.668-6.184-9.015-8.585-2.669-1.916-8.661-4.504-9.775-7.609l-.205-.195c1.893-.214 4.103-.898 5.85-1.367 2.934-.786 5.356-.583 8.386-1.365 1.366-.39 2.899-.781 3.899-1.171v-.78c-1-1.571-2.427-3.651-4.097-5.073-4.369-3.72-9.041-7.437-13.951-10.537-2.723-1.718-6.041-2.835-8.926-4.292-.971-.491-2.652-.746-3.294-1.562-1.517-1.932-2.328-4.382-3.498-6.633-2.449-4.717-4.849-9.868-7.019-14.831-1.48-3.384-2.443-6.72-4.289-9.756-8.86-14.567-18.396-23.358-33.169-32-3.144-1.838-6.929-2.563-10.929-3.513-2.144-.129-4.291-.26-6.437-.391-1.311-.546-2.674-2.149-3.902-2.927C17.81 4.565 5.258-2.16 1.633 6.682c-2.289 5.581 3.421 11.025 5.462 13.854 1.434 1.982 3.269 4.207 4.293 6.438.675 1.467.79 2.938 1.367 4.489 1.418 3.822 2.651 7.98 4.487 11.511.927 1.788 1.949 3.67 3.122 5.268.718.981 1.95 1.413 2.145 2.927-1.204 1.686-1.273 4.304-1.95 6.44-3.05 9.615-1.898 21.567 2.537 28.683 1.36 2.186 4.566 6.871 8.975 5.073 3.856-1.57 3.226-6.438 4.329-10.732.249-.972-.185-1.688.815-2.341v.195a128.6 128.6 0 003.282 7.024c2.6 4.187 6.889 8.562 10.546 11.391 1.965 1.52 3.505 4.13 5.918 5.073v-.195h-.195c-.481-.747-.964-1.068-1.558-1.754-1.531-1.495-3.225-3.358-4.487-5.073-3.556-4.827-6.698-10.122-9.561-15.622-1.368-2.626-2.557-5.529-3.709-8.201-.443-1.03-.438-2.592-1.364-3.124-1.263 1.958-3.122 3.54-4.099 5.853-1.559 3.696-1.762 8.204-2.341 12.877-.342.125-.19.038-.391.194-2.718-.655-3.672-3.452-4.683-5.853-2.553-6.07-3.029-15.843-.781-22.829.582-1.809 3.211-7.501 2.146-9.172-.508-1.665-2.184-2.63-3.121-3.903-1.161-1.574-2.319-3.646-3.123-5.464-2.091-4.731-3.066-10.044-5.267-14.828-1.05-2.287-2.832-4.602-4.293-6.634-1.617-2.253-3.429-3.912-4.684-6.635-.445-.968-1.051-2.518-.39-3.513.21-.671.507-.951 1.171-1.17 1.133-.873 4.283.29 5.463.779 3.129 1.3 5.741 2.5 8.392 4.256 1.271.844 2.559 1.89 4.097 2.89h1.756c2.747 0 5.824.232 8.391 1.012 4.535 1.379 8.6 3.542 12.292 5.873 11.246 7.102 20.441 17.22 26.732 29.278 1.012 1.942 1.45 3.799 2.341 5.858 1.798 4.153 4.064 8.428 5.853 12.489 1.786 4.053 3.526 8.142 6.05 11.514 1.327 1.772 6.451 2.724 8.78 3.709 1.633.689 4.308 1.409 5.854 2.34 2.953 1.782 5.814 3.904 8.586 5.855 1.384.974 5.64 3.114 5.853 5.072zM35.144 63.827c-1.436-.019-2.454.156-3.514.389v.195h.195c.683 1.402 1.887 2.305 2.731 3.513.65 1.367 1.301 2.732 1.952 4.099l.194-.193c1.209-.854 1.763-2.214 1.755-4.294-.483-.509-.556-1.146-.974-1.755-.558-.809-1.639-1.268-2.339-1.954z"/>
+                    </svg>
+                </div>
+                <span class="tech-name">SQL</span>
+            </div>
+        </div>
+        
+        
+        <!-- Skills Categories Grid -->
+        <div class="skills-grid">
+            <!-- Programming Languages -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <h3 class="category-title">Programming</h3>
+                </div>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <span class="check-icon">✓</span>
+                        <span class="skill-name">XML</span>
+                    </li>
+                    <li class="skill-item">
+
+                        <span class="check-icon">✓</span>
+                        <span class="skill-name">Java</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="check-icon">✓</span>
+                        <span class="skill-name">C/C++</span>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Web Development Category -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <h3 class="category-title">Web Development</h3>
+                </div>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <span class="check-icon">✓</span>
+                        <span class="skill-name">Node.js</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="check-icon">✓</span>
+                        <span class="skill-name">AngularJS</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="check-icon">✓</span>
+                        <span class="skill-name">RESTful APIs</span>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Software Engineering Category -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <h3 class="category-title">Engineering Practices</h3>
+                </div>
+                <ul class="skill-list">
+                   
+                    <li class="skill-item">
+                        <span class="check-icon">✓</span>
+                        <span class="skill-name">Unit Testing</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="check-icon">✓</span>
+                        <span class="skill-name">Data Manipulation</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="check-icon">✓</span>
+                        <span class="skill-name">Git & Version Control</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="section-divider"></div>
+<!-- Projects Section -->
+<section id="projects" class="projects-section fade-in">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-image-container">
+                    <div class="project-image project-image-1"></div>
+                    <div class="project-tags">
+                        <span class="project-tag">Accessibility</span>
+                        <span class="project-tag">Web App</span>
+                        <span class="project-tag">AngularJS</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">SwarajyAbility – Job Portal for People with Disabilities</h3>
+                        <div class="project-links">
+                           
+                            <a href="https://www.swarajability.org" target="_blank" class="project-link" aria-label="Live Demo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M15.5 2.25a.75.75 0 01.75-.75h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V4.06l-6.22 6.22a.75.75 0 11-1.06-1.06L19.94 3h-3.69a.75.75 0 01-.75-.75z"></path>
+                                    <path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 010 1.5h-8.5a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 00.25-.25v-8.5a.75.75 0 011.5 0v8.5a1.75 1.75 0 01-1.75 1.75H4.25a1.75 1.75 0 01-1.75-1.75V4.25z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A comprehensive job portal designed specifically for people with disabilities. This platform matches candidates with suitable job opportunities.
+                    </p>
+                    <div class="project-features">
+                        <ul class="features-list">
+                            <li>Accessible UI with screen reader compatibility</li>
+                            <li>Smart job matching algorithm</li>
+                            <li>Resources for workplace accommodations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-image-container">
+                    <div class="project-image project-image-2"></div>
+                    <div class="project-tags">
+                        <span class="project-tag">NLP</span>
+                        <span class="project-tag">Toxicity Detection</span>
+                        <span class="project-tag">HuggingFace</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">Detoxify Comment Analyzer</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/pragnyaambekar/Detoxify-Comment-Analyzer" target="_blank" class="project-link" aria-label="GitHub Repository" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A toxicity detection tool for analyzing online comments using the Detoxify NLP model from Hugging Face Transformers.
+                    </p>
+                    <div class="project-features">
+                        <ul class="features-list">
+                            <li>Uses pretrained Detoxify model for real-time analysis</li>
+                            <li>Detects toxic, severe toxic, obscene, threat, insult, and identity hate categories</li>
+                            <li>Clean UI for text input and categorized predictions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-image-container">
+                    <div class="project-image project-image-3"></div>
+                    <div class="project-tags">
+                        <span class="project-tag">Machine Learning</span>
+                        <span class="project-tag">Data Analysis</span>
+                        <span class="project-tag">Python</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">Visual Defect Detection in Manufacturing</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/pragnyaambekar/Visual-Defect-Detection-Transfer-Learning" target="_blank" class="project-link" aria-label="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Built an AI-powered system to detect manufacturing defects using transfer learning with ResNet-50 and Grad-CAM for visual explanations.
+                    </p>
+                    <div class="project-features">
+                        <ul class="features-list">
+                            <li>Achieved 96.67% accuracy on single-category defect detection</li>
+                            <li>Used Grad-CAM to highlight defect areas visually</li>
+                            <li>Deployed as an interactive Streamlit web app</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-image-container">
+                    <div class="project-image project-image-4"></div>
+                    <div class="project-tags">
+                        <span class="project-tag">NLP</span>
+                        <span class="project-tag">Email Security</span>
+                        <span class="project-tag">Python</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">Inbox Guard: Spam & Phishing Detection</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/pragnyaambekar/InboxGuard" class="project-link" target="_blank" aria-label="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Developed a lightweight email security tool to classify and block spam and phishing emails using machine learning.
+                    </p>
+                    <div class="project-features">
+                        <ul class="features-list">
+                            <li>Used NLP and text classification with scikit-learn</li>
+                            <li>Trained on labeled spam/phishing datasets</li>
+                            <li>Deployed as a Flask web app for testing and demos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<div class="section-divider"></div>
+<!-- Experience Section -->
+<!-- Updated Experience Section HTML with Company Logos -->
+<section id="experience" class="experience-section fade-in">
+    <div class="container">
+        <h2 class="section-title">Experience</h2>
+        
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            <div class="timeline-item reveal-item">
+                <div class="timeline-logo-container">
+                    <div class="timeline-logo">
+                        <img src="./assets/secureais_logo.png" alt="Secure AIs Logo" />
+                    </div>
+                    <div class="logo-ring"></div>
+                </div>
+                <div class="timeline-date">June 2025 – Present</div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <h3 class="timeline-title">Software Engineering Intern</h3>
+                        <h4 class="timeline-company">Secure AIs</h4>
+                        
+                        <ul class="timeline-achievements">
+                            <li>Building a secure, modular UI components using React, improving responsiveness and reusability across the platform.</li>
+                            <li>Integrating cloud APIs for secure file uploads and metadata validation, reducing user-facing errors by 35%.</li>
+                        </ul>
+                        
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>JavaScript</span>
+                            <span>Secure APIs</span>
+                            <span>Cloud Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Experience Item 1 - UWB -->
+            
+            <div class="timeline-item reveal-item">
+                <div class="timeline-logo-container">
+                    <div class="timeline-logo">
+                        <img src="./assets/uwb_logo.png" width="50" height="50" alt="University of Washington Logo" />
+                    </div>
+                    <div class="logo-ring"></div>
+                </div>
+                <div class="timeline-date">October 2024 – June 2025</div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <h3 class="timeline-title">Graduate Research Assistant</h3>
+                        <h4 class="timeline-company">University of Washington – Bothell</h4>
+                        
+                        <ul class="timeline-achievements">
+                            <li>Conducted NLP-based toxicity analysis on 10K+ Twitch chat messages, detecting hate speech, threats, and identity attacks.</li>
+                            <li>Evaluated transformer models like BERT and DistilBERT, achieving an F1-score of 0.89 and improving label consistency by 35%.</li>
+                        </ul>
+                        
+                        <div class="tech-tags">
+                            <span>NLP</span>
+                            <span>Python</span>
+                            <span>Transformers</span>
+                            <span>Scikit-learn</span>
+                            <span>Pandas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Experience Item 2 - Byteridge -->
+            <div class="timeline-item reveal-item">
+                <div class="timeline-logo-container">
+                    <div class="timeline-logo">
+                        <img src="./assets/byteridge.jpeg" alt="Byteridge Logo" />
+                    </div>
+                    <div class="logo-ring"></div>
+                </div>
+                <div class="timeline-date">July 2023 - September 2024</div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <h3 class="timeline-title">Software Developer</h3>
+                        <h4 class="timeline-company">Byteridge</h4>
+                        
+                        <ul class="timeline-achievements">
+                            <li>Led the front-end development for Swarajyability, a disability job portal, using Angular and TypeScript, improving accessibility by 40%.</li>
+                            <li>Utilized GitHub for version control, and optimized with NgRx, leading to a 30% reduction in bugs and improved platform stability.</li>
+                        </ul>
+                        
+                        <div class="tech-tags">
+                            <span>Angular</span>
+                            <span>TypeScript</span>
+                            <span>NgRx</span>
+                            <span>Accessibility</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Experience Item 2 - Byteridge Intern -->
+            <div class="timeline-item reveal-item">
+                <div class="timeline-logo-container">
+                    <div class="timeline-logo">
+                        <img src="./assets/byteridge.jpeg" alt="Byteridge Logo" />
+                    </div>
+                    <div class="logo-ring"></div>
+                </div>
+                <div class="timeline-date">Jan 2023 - Apr 2023</div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <h3 class="timeline-title">Java Developer Intern</h3>
+                        <h4 class="timeline-company">Byteridge</h4>
+                        
+                        <ul class="timeline-achievements">
+                            <li>Collaborated with the backend team to migrate legacy APIs to Spring Boot, improving code maintainability.</li>
+                            <li>Developed internal tools for log analysis and debugging, reducing QA turnaround time by 40%.</li>
+                        </ul>
+                        
+                        <div class="tech-tags">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>Microservices</span>
+                            <span>Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Experience Item 3 - NFC Solutions -->
+            <!-- <div class="timeline-item reveal-item">
+                <div class="timeline-logo-container">
+                    <div class="timeline-logo">
+                        <img src="./assets/nfc.jpeg" alt="Byteridge Logo" />
+                    </div>
+                    <div class="logo-ring"></div>
+                </div>
+                <div class="timeline-date">Jun 2022 - Nov 2022</div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <h3 class="timeline-title">Machine Learning Intern </h3>
+                        <h4 class="timeline-company">NFC Solutions</h4>
+                        
+                        <ul class="timeline-achievements">
+                            <li>Developed customer churn prediction models using Logistic Regression and Decision Trees, achieving a predictive
+                                accuracy of 92.2% on the test dataset.</li>
+                            <li>Enhanced data preprocessing techniques to improve feature quality, leading to better model generalization and
+                                more actionable business insights.</li>
+                        </ul>
+                        
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>Data Analysis</span>
+                            <span>Machine Learning</span>
+                            <span>TensorFlow</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            
+            <!-- Experience Item 4 - Geogo -->
+            <!-- <div class="timeline-item reveal-item">
+                <div class="timeline-logo-container">
+                    <div class="timeline-logo">
+                        <img src="./assets/geogo.jpeg" alt="Byteridge Logo" />
+                    </div>
+                    <div class="logo-ring"></div>
+                </div>
+                <div class="timeline-date">Aug 2021 - Nov 2021</div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <h3 class="timeline-title">Artificial Intelligence Intern</h3>
+                        <h4 class="timeline-company">Geogo</h4>
+                        
+                        <ul class="timeline-achievements">
+                            <li>Designed an AI-powered chatbot using LSTM-based sequence-to-sequence models, achieving a BLEU score of 0.75 for accuracy.</li>
+                            <li>Implemented image classification models using CNNs, improving classification accuracy by 15% on a medical imaging dataset.</li>
+                        </ul>
+                        
+                        <div class="tech-tags">
+                            <span>LSTM</span>
+                            <span>Neural Networks</span>
+                            <span>NLP</span>
+                            <span>Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+<div class="section-divider"></div>
+<!-- Achievements Section -->
+<section id="achievements" class="achievements-section fade-in">
+    <div class="container">
+        <h2 class="section-title">Achievements</h2>
+        
+        <div class="achievements-grid">
+            <!-- Achievement Card 1 -->
+            <div class="achievement-card">
+                <div class="achievement-accent"></div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">Coding Competitions</h3>
+                    <p class="achievement-description">
+                        Runner-up in Internshala's Web Development Coding Contest, conducted nationwide. Achieved a rating of 4300 on Code Chef, ranking in the top 30% of global coders.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Achievement Card 2 -->
+            <div class="achievement-card">
+                <div class="achievement-accent"></div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">Platform Recognition</h3>
+                    <p class="achievement-description">
+                        Earned 5-star coder badge on Hackerrank, demonstrating proficiency in problem-solving, algorithms, and data structures.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Achievement Card 3 -->
+            <div class="achievement-card">
+                <div class="achievement-accent"></div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">Leadership Experience</h3>
+                    <p class="achievement-description">
+                        Served as Technical Head at Edam, organized hackathons, and guided peers towards internship opportunities in software development.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Achievement Card 4 -->
+            <div class="achievement-card">
+                <div class="achievement-accent"></div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">Professional Certifications</h3>
+                    <p class="achievement-description">
+                        Completed certifications in Full Stack Development, Python, Machine Learning, Programming for Problem Solving, and Android App Development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="section-divider"></div>
+<!-- Contact Section -->
+
+<!-- Conversational Contact Section HTML -->
+<section id="contact" class="contact-section fade-in">
+    <div class="container lets-chat">
+        <h2 class="section-title">Let's Chat</h2>
+        
+        <div class="chat-container">
+            <!-- Chat Header -->
+            <div class="chat-header">
+                <div class="chat-avatar">
+                    <div class="avatar-img">
+                        <svg viewBox="0 0 100 100" width="40" height="40">
+                            <circle cx="50" cy="50" r="45" fill="#4682A9"/>
+                            <text x="50" y="60" font-family="Arial" font-size="24" fill="white" text-anchor="middle">PA</text>
+                        </svg>
+                    </div>
+                    <div class="online-indicator"></div>
+                </div>
+                <div class="chat-info">
+                    <h3>Harsh Jannawar</h3>
+                    <p class="status">Online • Typically replies within 24 hours</p>
+                </div>
+            </div>
+            
+            <!-- Chat Messages Area -->
+            <div class="chat-messages" id="chatMessages">
+                <!-- Initial bot message -->
+                <div class="message bot-message">
+                    <div class="message-bubble">
+                        <span class="typing-text" data-text="Hey there! 👋 I'm Pragnya. What brings you here today?"></span>
+                    </div>
+                    <span class="message-time">just now</span>
+                </div>
+            </div>
+            
+            <!-- Chat Input Area -->
+            <div class="chat-input-container">
+                <div class="quick-replies" id="quickReplies">
+                    <button class="quick-reply-btn" data-reply="discuss-project">Discuss a project</button>
+                    <button class="quick-reply-btn" data-reply="job-opportunity">Job opportunity</button>
+                    <button class="quick-reply-btn" data-reply="collaboration">Collaboration</button>
+                    <button class="quick-reply-btn" data-reply="just-saying-hi">Just saying hi!</button>
+                </div>
+                
+                <form class="chat-form" id="chatForm" style="display: none;">
+                    <input 
+                        type="text" 
+                        class="chat-input" 
+                        id="chatInput" 
+                        placeholder="Type your message..."
+                        autocomplete="off"
+                    />
+                    <button type="submit" class="send-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Alternative Contact Methods -->
+        <div class="alternative-contact">
+            <p>Prefer traditional methods?</p>
+                <div class="contact-links">
+                    <a href="https://github.com/pragnyaambekar" target="_blank" rel="noreferrer"
+                        class="social-button-labeled github">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </div>
+                        <span class="button-text">GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/pragnya-ambekar" target="_blank" rel="noreferrer"
+                        class="social-button-labeled linkedin">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </div>
+                        <span class="button-text">LinkedIn</span>
+                    </a>
+                    <a href="mailto:pragnya.ambekar@gmail.com" class="social-button-labeled gmail">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068A1.485 1.485 0 0 1 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.068.432.27.268.432.643.432 1.068z" />
+                            </svg>
+                        </div>
+                        <span class="button-text">Gmail</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Harsh Jannawar. All rights reserved.</p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
