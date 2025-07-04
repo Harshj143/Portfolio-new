@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const phrases = [
             "an AI enthusiast",
             "a Masters Student",
-            "a software engineer"
+            "a Cybersecurity engineer"
         ];
         let currentPhraseIndex = 0;
         let currentCharIndex = 0;
