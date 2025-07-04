@@ -112,7 +112,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Available commands and their outputs
         const commands = {
-            'cat about_me.txt': `assionate about protecting organizations through offensive and defensive security. With hands-on experience in penetration testing, AI-powered phishing detection, and cloud security hardening, I aim to blend technical depth and innovation to create safer digital ecosystems. When not working on projects, I enjoy competing in CTFs and exploring the latest in AI security.`,
+            'cat about_me.txt': `Passionate about protecting organizations through offensive and defensive security. With hands-on experience in penetration testing, AI-powered phishing detection, and cloud security hardening, I aim to blend technical depth and innovation to create safer digital ecosystems. 
+When not working on projects, I enjoy competing in CTFs and exploring the latest in AI security.`,
             'clear': 'CLEAR'
         };
 
