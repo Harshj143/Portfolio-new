@@ -3240,3 +3240,212 @@ body.dark-mode ::selection {
         color: black;
     }
 }
+/* Matrix Background Animation - Add this to your existing CSS */
+
+/* Matrix Canvas Container */
+.matrix-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #000;
+    overflow: hidden;
+}
+
+.matrix-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    transition: opacity 0.3s ease;
+}
+
+body.dark-mode .matrix-canvas {
+    opacity: 0.25;
+}
+
+/* Enhanced Matrix Animation using CSS only */
+.matrix-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Matrix Characters */
+.matrix-column {
+    position: absolute;
+    top: -100%;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 14px;
+    color: #00ff41;
+    text-shadow: 0 0 5px #00ff41;
+    white-space: nowrap;
+    line-height: 18px;
+    letter-spacing: 0;
+    animation: matrixFall linear infinite;
+    opacity: 0.3;
+}
+
+body.dark-mode .matrix-column {
+    opacity: 0.5;
+    color: #dc2626;
+    text-shadow: 0 0 8px #dc2626;
+}
+
+/* Different speeds for variation */
+.matrix-column:nth-child(odd) {
+    animation-duration: 8s;
+    font-size: 12px;
+}
+
+.matrix-column:nth-child(even) {
+    animation-duration: 12s;
+    font-size: 16px;
+}
+
+.matrix-column:nth-child(3n) {
+    animation-duration: 10s;
+    font-size: 14px;
+    opacity: 0.2;
+}
+
+.matrix-column:nth-child(4n) {
+    animation-duration: 15s;
+    font-size: 13px;
+    opacity: 0.4;
+}
+
+.matrix-column:nth-child(5n) {
+    animation-duration: 6s;
+    font-size: 15px;
+}
+
+@keyframes matrixFall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Background overlay to ensure readability */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(250, 250, 250, 0.85);
+    z-index: -1;
+    pointer-events: none;
+}
+
+body.dark-mode::before {
+    background: rgba(10, 14, 26, 0.85);
+}
+
+/* Ensure sections have proper background */
+.section, .hero-section {
+    position: relative;
+    background: rgba(250, 250, 250, 0.95);
+    backdrop-filter: blur(1px);
+}
+
+body.dark-mode .section,
+body.dark-mode .hero-section {
+    background: rgba(10, 14, 26, 0.95);
+}
+
+/* Matrix character variations */
+.matrix-char-1::after { content: '0'; }
+.matrix-char-2::after { content: '1'; }
+.matrix-char-3::after { content: 'ア'; }
+.matrix-char-4::after { content: 'イ'; }
+.matrix-char-5::after { content: 'ウ'; }
+.matrix-char-6::after { content: 'エ'; }
+.matrix-char-7::after { content: 'オ'; }
+.matrix-char-8::after { content: 'カ'; }
+.matrix-char-9::after { content: 'キ'; }
+.matrix-char-10::after { content: 'ク'; }
+.matrix-char-11::after { content: 'ケ'; }
+.matrix-char-12::after { content: 'コ'; }
+.matrix-char-13::after { content: 'サ'; }
+.matrix-char-14::after { content: 'シ'; }
+.matrix-char-15::after { content: 'ス'; }
+.matrix-char-16::after { content: 'セ'; }
+.matrix-char-17::after { content: 'ソ'; }
+.matrix-char-18::after { content: 'タ'; }
+.matrix-char-19::after { content: 'チ'; }
+.matrix-char-20::after { content: 'ツ'; }
+
+/* Performance optimizations */
+.matrix-rain {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.matrix-column {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .matrix-column {
+        font-size: 10px;
+        line-height: 14px;
+    }
+    
+    .matrix-column:nth-child(odd) {
+        font-size: 9px;
+    }
+    
+    .matrix-column:nth-child(even) {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .matrix-column {
+        font-size: 8px;
+        line-height: 12px;
+        opacity: 0.2;
+    }
+    
+    body.dark-mode .matrix-column {
+        opacity: 0.3;
+    }
+}
+
+/* Enhanced glow effect for cybersecurity theme */
+@media (min-width: 1024px) {
+    .matrix-column {
+        text-shadow: 
+            0 0 5px currentColor,
+            0 0 10px currentColor,
+            0 0 15px currentColor;
+    }
+}
+
+/* Pause animation on hover for better UX */
+.hero-section:hover .matrix-column,
+.section:hover .matrix-column {
+    animation-play-state: paused;
+}

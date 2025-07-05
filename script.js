@@ -787,4 +787,247 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
     // Run animations on scroll
     window.addEventListener('scroll', handleScrollAnimations);
 
+    setTimeout(initMatrixBackground, 500);
+
+
+});
+
+// Matrix Background Effect - Add this to your existing script.js
+
+// Matrix characters - mix of binary, hex, and katakana
+const matrixChars = [
+    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+    'A', 'B', 'C', 'D', 'E', 'F',
+    'ア', 'イ', 'ウ', 'エ', 'オ', 'カ', 'キ', 'ク', 'ケ', 'コ',
+    'サ', 'シ', 'ス', 'セ', 'ソ', 'タ', 'チ', 'ツ', 'テ', 'ト',
+    'ナ', 'ニ', 'ヌ', 'ネ', 'ノ', 'ハ', 'ヒ', 'フ', 'ヘ', 'ホ',
+    'マ', 'ミ', 'ム', 'メ', 'モ', 'ヤ', 'ユ', 'ヨ', 'ラ', 'リ',
+    '!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
+    '-', '=', '+', '[', ']', '{', '}', '|', '\\', ';',
+    ':', '"', "'", '<', '>', ',', '.', '?', '/'
+];
+
+// Matrix Effect Class
+class MatrixEffect {
+    constructor() {
+        this.container = null;
+        this.columns = [];
+        this.isRunning = false;
+        this.animationFrame = null;
+        this.lastTime = 0;
+        this.createContainer();
+        this.init();
+    }
+
+    createContainer() {
+        // Create matrix container
+        this.container = document.createElement('div');
+        this.container.className = 'matrix-rain';
+        document.body.insertBefore(this.container, document.body.firstChild);
+    }
+
+    init() {
+        this.createColumns();
+        this.start();
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            this.destroy();
+            setTimeout(() => {
+                this.createColumns();
+                this.start();
+            }, 100);
+        });
+
+        // Pause/resume based on visibility
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                this.pause();
+            } else {
+                this.resume();
+            }
+        });
+    }
+
+    createColumns() {
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+        const columnWidth = 20; // Width of each column
+        const numColumns = Math.floor(screenWidth / columnWidth);
+
+        // Clear existing columns
+        this.container.innerHTML = '';
+        this.columns = [];
+
+        for (let i = 0; i < numColumns; i++) {
+            this.createColumn(i * columnWidth, screenHeight);
+        }
+    }
+
+    createColumn(x, screenHeight) {
+        const column = document.createElement('div');
+        column.className = 'matrix-column';
+        column.style.left = `${x}px`;
+        
+        // Random column properties
+        const charCount = Math.floor(Math.random() * 15) + 10;
+        const speed = Math.random() * 3 + 2; // Speed multiplier
+        const delay = Math.random() * 5; // Delay before starting
+        
+        // Generate random characters for this column
+        let columnText = '';
+        for (let i = 0; i < charCount; i++) {
+            const randomChar = matrixChars[Math.floor(Math.random() * matrixChars.length)];
+            columnText += randomChar + '\n';
+        }
+        
+        column.textContent = columnText;
+        
+        // Set animation properties
+        const duration = (screenHeight + 200) / (speed * 20); // Calculate duration based on speed
+        column.style.animationDuration = `${duration}s`;
+        column.style.animationDelay = `${delay}s`;
+        
+        // Random starting position
+        column.style.top = `-${Math.random() * 100 + 100}px`;
+        
+        this.container.appendChild(column);
+        this.columns.push({
+            element: column,
+            x: x,
+            speed: speed,
+            delay: delay,
+            text: columnText
+        });
+
+        // Restart animation when it ends
+        column.addEventListener('animationend', () => {
+            this.restartColumn(column, x, screenHeight);
+        });
+    }
+
+    restartColumn(column, x, screenHeight) {
+        // Generate new random text
+        const charCount = Math.floor(Math.random() * 15) + 10;
+        let newText = '';
+        for (let i = 0; i < charCount; i++) {
+            const randomChar = matrixChars[Math.floor(Math.random() * matrixChars.length)];
+            newText += randomChar + '\n';
+        }
+        
+        column.textContent = newText;
+        
+        // Reset animation with new properties
+        const speed = Math.random() * 3 + 2;
+        const delay = Math.random() * 2;
+        const duration = (screenHeight + 200) / (speed * 20);
+        
+        column.style.animationDuration = `${duration}s`;
+        column.style.animationDelay = `${delay}s`;
+        column.style.top = `-${Math.random() * 100 + 100}px`;
+        
+        // Restart animation
+        column.style.animation = 'none';
+        column.offsetHeight; // Trigger reflow
+        column.style.animation = `matrixFall ${duration}s ${delay}s linear infinite`;
+    }
+
+    start() {
+        this.isRunning = true;
+        this.container.style.display = 'block';
+    }
+
+    pause() {
+        this.isRunning = false;
+        this.columns.forEach(col => {
+            col.element.style.animationPlayState = 'paused';
+        });
+    }
+
+    resume() {
+        this.isRunning = true;
+        this.columns.forEach(col => {
+            col.element.style.animationPlayState = 'running';
+        });
+    }
+
+    destroy() {
+        this.isRunning = false;
+        if (this.animationFrame) {
+            cancelAnimationFrame(this.animationFrame);
+        }
+        this.container.innerHTML = '';
+        this.columns = [];
+    }
+
+    // Method to change matrix color theme
+    setTheme(isDark) {
+        const columns = this.container.querySelectorAll('.matrix-column');
+        columns.forEach(column => {
+            if (isDark) {
+                column.style.color = '#dc2626';
+                column.style.textShadow = '0 0 8px #dc2626';
+            } else {
+                column.style.color = '#00ff41';
+                column.style.textShadow = '0 0 5px #00ff41';
+            }
+        });
+    }
+}
+
+// Initialize Matrix Effect when DOM is loaded
+function initMatrixBackground() {
+    // Check if user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+        console.log('Matrix effect disabled due to user motion preferences');
+        return;
+    }
+
+    // Create matrix effect
+    const matrix = new MatrixEffect();
+
+    // Update theme when theme toggle is used
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            setTimeout(() => {
+                const isDarkMode = document.body.classList.contains('dark-mode');
+                matrix.setTheme(isDarkMode);
+            }, 100);
+        });
+    }
+
+    // Set initial theme
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    matrix.setTheme(isDarkMode);
+
+    // Performance: Pause matrix on scroll for better performance
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        matrix.pause();
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            matrix.resume();
+        }, 150);
+    });
+
+    // Store matrix instance globally for potential external control
+    window.matrixEffect = matrix;
+}
+
+// Add to your existing DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', function() {
+    // Your existing initialization code...
+    
+    // Initialize Matrix Background
+    setTimeout(initMatrixBackground, 500); // Small delay to ensure page is ready
+});
+
+// Performance optimization: Clean up on page unload
+window.addEventListener('beforeunload', () => {
+    if (window.matrixEffect) {
+        window.matrixEffect.destroy();
+    }
 });
