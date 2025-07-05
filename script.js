@@ -1,7 +1,7 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     // EmailJS Configuration
-    emailjs.init('p-hYrNXBAljmO2v2h');
+    emailjs.init('yRFOaFyNl8zfRdWtN');
 
     const EMAIL_CONFIG = {
         serviceID: 'service_xoh64yo',
