@@ -3,11 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // EmailJS Configuration
     emailjs.init('p-hYrNXBAljmO2v2h');
 
-    // Update the email recipient in the EmailJS configuration
     const EMAIL_CONFIG = {
-        serviceID: 'service_wh09gi7',
-        templateID: 'template_tq4besv',
-        recipientEmail: 'hjannawar@gmail.com' // Updated recipient email
+        serviceID: 'service_xoh64yo',
+        templateID: 'template_znpc1en'
     };
     // ======= THEME TOGGLE FUNCTIONALITY WITH PERSISTENCE =======
     const themeToggle = document.getElementById('theme-toggle');
@@ -667,6 +665,7 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
 
         // Function to send email via EmailJS
         function sendEmailNotification(userMessage, topic) {
+            // Create proper subject based on topic
             const subjectMap = {
                 'discuss-project': 'Project Discussion - Portfolio Contact',
                 'job-opportunity': 'Job Opportunity - Portfolio Contact',
@@ -681,8 +680,7 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
                 message: userMessage,
                 timestamp: new Date().toLocaleString(),
                 from_email: window.userEmail || 'No email provided',
-                reply_to: window.userEmail || 'noreply@example.com',
-                to_email: EMAIL_CONFIG.recipientEmail // Ensure the email is sent to hjannawar@gmail.com
+                reply_to: window.userEmail || 'noreply@example.com'
             };
 
             return emailjs.send(EMAIL_CONFIG.serviceID, EMAIL_CONFIG.templateID, templateParams)
