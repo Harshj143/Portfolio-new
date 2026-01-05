@@ -1,4 +1,16 @@
 // Wait for DOM to be fully loaded
+// ======= SCROLL PROGRESS INDICATOR =======
+function updateScrollProgress() {
+    const progressBar = document.getElementById('scrollProgress');
+    if (!progressBar) return;
+
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    progressBar.style.width = scrolled + "%";
+}
+
+window.addEventListener('scroll', updateScrollProgress);
 document.addEventListener('DOMContentLoaded', function () {
     // EmailJS Configuration
     emailjs.init('yRFOaFyNl8zfRdWtN');
@@ -791,11 +803,55 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
         }
     }
 
+    // ======= RESUME MODAL LOGIC =======
+    function setupResumeModal() {
+        const modal = document.getElementById('resume-modal');
+        const btn = document.getElementById('view-resume');
+        const span = document.querySelector('.close-modal');
+
+        if (!modal || !btn || !span) return;
+
+        // Open modal
+        btn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+            document.body.style.overflow = 'hidden'; // Stop scrolling
+        });
+
+        // Close modal
+        const closeModalFunc = () => {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        };
+
+        span.addEventListener('click', closeModalFunc);
+
+        // Close on backdrop click
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                closeModalFunc();
+            }
+        });
+
+        // Close on ESC key
+        window.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && modal.classList.contains('active')) {
+                closeModalFunc();
+            }
+        });
+    }
+
     // ======= INITIALIZE ALL FUNCTIONS =======
     setupInteractiveTerminal();
     setupSkillCardAnimations();
     setupExperienceAnimations();
     initConversationalContact();
+    setupResumeModal();
 
     // Run animations on initial load
     handleScrollAnimations();

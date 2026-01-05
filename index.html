@@ -53,6 +53,15 @@
 </head>
 
 <body class="light-mode">
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+
+    <!-- Background Decoration -->
+    <div class="bg-decoration">
+        <div class="blob blob-1 floating-element"></div>
+        <div class="blob blob-2 floating-element"></div>
+    </div>
     <!-- Hero Section -->
     <div class="hero-section">
         <!-- Theme toggle button -->
@@ -102,6 +111,9 @@
                             View Projects
                             <span class="arrow-icon">→</span>
                         </a>
+                        <button id="view-resume" class="secondary-button resume-button">
+                            View Resume
+                        </button>
                         <a href="#contact" class="secondary-button">
                             Get In Touch
                         </a>
@@ -364,171 +376,230 @@
             <h2 class="section-title">Projects</h2>
 
             <div class="projects-grid">
-                <!-- Project 1 -->
-
-                <div class="project-card">
+                <!-- lead Project: SOC RAGBot -->
+                <div class="project-card lead-project glass-effect">
                     <div class="project-image-container">
-                        <div class="project-image project-image-4"></div>
+                        <div class="project-image project-image-ragbot"></div>
                         <div class="project-tags">
-                            <span class="project-tag">NLP</span>
-                            <span class="project-tag">Email Security</span>
+                            <span class="project-tag">AI Security</span>
+                            <span class="project-tag">RAG</span>
+                            <span class="project-tag">LLM Ops</span>
                             <span class="project-tag">Python</span>
                         </div>
                     </div>
                     <div class="project-content">
                         <div class="project-header">
-                            <h3 class="project-title">Inbox Guard: Spam & Phishing Detection</h3>
+                            <h3 class="project-title">SOC RAGBot: Secure Incident Investigator</h3>
                             <div class="project-links">
-                                <a href="https://github.com/Harshj143/InboxGuard" class="project-link" target="_blank"
-                                    aria-label="GitHub Repository">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                    </svg>
-                                </a>
-
+                                <span class="project-badge">New</span>
                             </div>
                         </div>
                         <p class="project-description">
-                            Developed a lightweight email security tool and extension to classify and block spam and
-                            phishing emails using machine learning.
+                            Advanced AI-powered SOC assistant using Retrieval-Augmented Generation to deliver secure,
+                            citation-aware incident investigation reports.
                         </p>
-                        <div class="project-features">
-                            <ul class="features-list">
-                                <li>Used NLP and text classification with scikit-learn</li>
-                                <li>Trained on labeled spam/phishing datasets</li>
-                                <li>Deployed as a Flask web app along with extension</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <div class="project-image project-image-2"></div>
-                        <div class="project-tags">
-                            <span class="project-tag">Linux</span>
-                            <span class="project-tag">Real-time</span>
-                            <span class="project-tag">Cloud</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">LinuxSentinel</h3>
-                            <div class="project-links">
-                                <a href="https://github.com/Harshj143/LinuxSentinel" target="_blank"
-                                    class="project-link" aria-label="GitHub Repository" target="_blank">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                    </svg>
-                                </a>
+                        <div class="project-features-grid">
+                            <div class="feature-item">
+                                <span class="feature-icon">🔍</span>
+                                <div class="feature-text">
+                                    <strong>Advanced RAG Engine:</strong> Citation-aware retrieval with enritched
+                                    metadata and source binding to prevent hallucinations.
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">⚡</span>
+                                <div class="feature-text">
+                                    <strong>Optimization:</strong> Semantic caching (latency <0.3s) and multi-model
+                                        orchestration (GPT-4o & 4o-mini). </div>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🛡️</span>
+                                    <div class="feature-text">
+                                        <strong>Fortified Security:</strong> Deterministic guard layer for prompt
+                                        injection and jailbreak detection.
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">📋</span>
+                                    <div class="feature-text">
+                                        <strong>Auditing:</strong> Enterprise-grade audit & replay layer capturing full
+                                        interaction logs for compliance.
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <p class="project-description">
-                            OS telemetry tool is a custom monitoring solution built for Linux systems. It monitors all
-                            the subsystems and sends real-time logs directly to the cloud storage.
-                        </p>
-                        <div class="project-features">
-                            <ul class="features-list">
-                                <li>Unables real-time tracking of critical subsystems, such as network activity, file
-                                    system changes, memory usage, and input/output operations.</li>
-                                <li>securely transmits all collected telemetry data directly to the cloud for storage
-                                    and analysis</li>
-                            </ul>
-                        </div>
                     </div>
-                </div>
 
+                    <!-- Project 1 -->
 
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <div class="project-image project-image-3"></div>
-                        <div class="project-tags">
-                            <span class="project-tag">Security Tools</span>
-                            <span class="project-tag">Automation</span>
-                            <span class="project-tag">Red Teaming</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">RTeamF</h3>
-                            <div class="project-links">
-                                <a href="https://github.com/Harshj143/RTeamF" target="_blank" class="project-link"
-                                    aria-label="GitHub Repository">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                    </svg>
-                                </a>
-
+                    <div class="project-card glass-effect">
+                        <div class="project-image-container">
+                            <div class="project-image project-image-4"></div>
+                            <div class="project-tags">
+                                <span class="project-tag">NLP</span>
+                                <span class="project-tag">Email Security</span>
+                                <span class="project-tag">Python</span>
                             </div>
                         </div>
-                        <p class="project-description">
-                            Automated domain scanning tool that integrates subdomain discovery, vulnerability detection,
-                            and CVE matching into a single pipeline.
-                        </p>
-                        <div class="project-features">
-                            <ul class="features-list">
-                                <li>Live domains checkand Open Port Scanning</li>
-                                <li>Vulnerability Detection and Technology Stack Identification </li>
-                                <li>CWE and CVE Retrieval along with Exploit Database ID's.</li>
-                            </ul>
-                        </div>
-                    </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Inbox Guard: Spam & Phishing Detection</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/Harshj143/InboxGuard" class="project-link"
+                                        target="_blank" aria-label="GitHub Repository">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg>
+                                    </a>
 
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <div class="project-image project-image-1"></div>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">AV scanning</span>
-                            <span class="project-tag">Hosting</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">DRedrive</h3>
-                            <div class="project-links">
-
-                                <a href="https://github.com/Harshj143/Dredrive" target="_blank" class="project-link"
-                                    aria-label="Live Demo">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M15.5 2.25a.75.75 0 01.75-.75h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V4.06l-6.22 6.22a.75.75 0 11-1.06-1.06L19.94 3h-3.69a.75.75 0 01-.75-.75z">
-                                        </path>
-                                        <path
-                                            d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 010 1.5h-8.5a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 00.25-.25v-8.5a.75.75 0 011.5 0v8.5a1.75 1.75 0 01-1.75 1.75H4.25a1.75 1.75 0 01-1.75-1.75V4.25z">
-                                        </path>
-                                    </svg>
-                                </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Developed a lightweight email security tool and extension to classify and block spam and
+                                phishing emails using machine learning.
+                            </p>
+                            <div class="project-features">
+                                <ul class="features-list">
+                                    <li>Used NLP and text classification with scikit-learn</li>
+                                    <li>Trained on labeled spam/phishing datasets</li>
+                                    <li>Deployed as a Flask web app along with extension</li>
+                                </ul>
                             </div>
                         </div>
-                        <p class="project-description">
-                            DRedrive is a secure USB operations tool featuring ClamAV scanning, local file hosting, and
-                            drive formatting via an interactive GUI.
-                        </p>
-                        <div class="project-features">
-                            <ul class="features-list">
-                                <li>Scan USB drives for malware with integrated ClamAV</li>
-                                <li>Host and share files securely over a local network</li>
-                                <li>Format and manage drives without repeated unplugging</li>
-                            </ul>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-effect">
+                        <div class="project-image-container">
+                            <div class="project-image project-image-2"></div>
+                            <div class="project-tags">
+                                <span class="project-tag">Linux</span>
+                                <span class="project-tag">Real-time</span>
+                                <span class="project-tag">Cloud</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">LinuxSentinel</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/Harshj143/LinuxSentinel" target="_blank"
+                                        class="project-link" aria-label="GitHub Repository" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                OS telemetry tool is a custom monitoring solution built for Linux systems. It monitors
+                                all
+                                the subsystems and sends real-time logs directly to the cloud storage.
+                            </p>
+                            <div class="project-features">
+                                <ul class="features-list">
+                                    <li>Unables real-time tracking of critical subsystems, such as network activity,
+                                        file
+                                        system changes, memory usage, and input/output operations.</li>
+                                    <li>securely transmits all collected telemetry data directly to the cloud for
+                                        storage
+                                        and analysis</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-effect">
+                        <div class="project-image-container">
+                            <div class="project-image project-image-3"></div>
+                            <div class="project-tags">
+                                <span class="project-tag">Security Tools</span>
+                                <span class="project-tag">Automation</span>
+                                <span class="project-tag">Red Teaming</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">RTeamF</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/Harshj143/RTeamF" target="_blank" class="project-link"
+                                        aria-label="GitHub Repository">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Automated domain scanning tool that integrates subdomain discovery, vulnerability
+                                detection,
+                                and CVE matching into a single pipeline.
+                            </p>
+                            <div class="project-features">
+                                <ul class="features-list">
+                                    <li>Live domains checkand Open Port Scanning</li>
+                                    <li>Vulnerability Detection and Technology Stack Identification </li>
+                                    <li>CWE and CVE Retrieval along with Exploit Database ID's.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card glass-effect">
+                        <div class="project-image-container">
+                            <div class="project-image project-image-1"></div>
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">AV scanning</span>
+                                <span class="project-tag">Hosting</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">DRedrive</h3>
+                                <div class="project-links">
+
+                                    <a href="https://github.com/Harshj143/Dredrive" target="_blank" class="project-link"
+                                        aria-label="Live Demo">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M15.5 2.25a.75.75 0 01.75-.75h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V4.06l-6.22 6.22a.75.75 0 11-1.06-1.06L19.94 3h-3.69a.75.75 0 01-.75-.75z">
+                                            </path>
+                                            <path
+                                                d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 010 1.5h-8.5a.25.25 0 00-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 00.25-.25v-8.5a.75.75 0 011.5 0v8.5a1.75 1.75 0 01-1.75 1.75H4.25a1.75 1.75 0 01-1.75-1.75V4.25z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                DRedrive is a secure USB operations tool featuring ClamAV scanning, local file hosting,
+                                and
+                                drive formatting via an interactive GUI.
+                            </p>
+                            <div class="project-features">
+                                <ul class="features-list">
+                                    <li>Scan USB drives for malware with integrated ClamAV</li>
+                                    <li>Host and share files securely over a local network</li>
+                                    <li>Format and manage drives without repeated unplugging</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
     </section>
     <div class="section-divider"></div>
     <!-- Experience Section -->
@@ -548,7 +619,7 @@
                     </div>
                     <div class="timeline-date">June 2025 – Present</div>
                     <div class="timeline-content">
-                        <div class="timeline-card">
+                        <div class="timeline-card glass-effect">
                             <h3 class="timeline-title">AI Cybersecurity Engineering Intern</h3>
                             <h4 class="timeline-company">Secure AIs</h4>
 
@@ -583,7 +654,7 @@
                     </div>
                     <div class="timeline-date">June 2023 – May 2024</div>
                     <div class="timeline-content">
-                        <div class="timeline-card">
+                        <div class="timeline-card glass-effect">
                             <h3 class="timeline-title">Security Analyst Intern </h3>
                             <h4 class="timeline-company">SecureThings, Pune, India</h4>
 
@@ -619,7 +690,7 @@
                     </div>
                     <div class="timeline-date">Jun 2022 - July 2023</div>
                     <div class="timeline-content">
-                        <div class="timeline-card">
+                        <div class="timeline-card glass-effect">
                             <h3 class="timeline-title">Cloud Computing Intern </h3>
                             <h4 class="timeline-company">Pune Metro Rail Project - India</h4>
 
@@ -654,7 +725,7 @@
                 </div>
                 <div class="timeline-date">July 2023 - September 2024</div>
                 <div class="timeline-content">
-                    <div class="timeline-card">
+                    <div class="timeline-card glass-effect">
                         <h3 class="timeline-title">Software Developer</h3>
                         <h4 class="timeline-company">Byteridge</h4>
                         
@@ -685,7 +756,7 @@
                 </div>
                 <div class="timeline-date">Jun 2022 - Nov 2022</div>
                 <div class="timeline-content">
-                    <div class="timeline-card">
+                    <div class="timeline-card glass-effect">
                         <h3 class="timeline-title">Machine Learning Intern </h3>
                         <h4 class="timeline-company">NFC Solutions</h4>
                         
@@ -716,7 +787,7 @@
                 </div>
                 <div class="timeline-date">Aug 2021 - Nov 2021</div>
                 <div class="timeline-content">
-                    <div class="timeline-card">
+                    <div class="timeline-card glass-effect">
                         <h3 class="timeline-title">Artificial Intelligence Intern</h3>
                         <h4 class="timeline-company">Geogo</h4>
                         
@@ -785,8 +856,8 @@
                     <div class="achievement-content">
                         <h3 class="achievement-title">Professional Certifications</h3>
                         <p class="achievement-description">
-                            Network Defense Essentials (EC-Council CodeRed), Oracle Cloud Infrastructure Foundations,
-                            Practical Ethical Hacking (TCM Security), CompTIA Security+ (in progress)
+                            CompTIA Security+, AI Hacking (TCM Security), Ethical Hacking (EC-Council), Oracle Cloud
+                            Infrastructure Foundations
                         </p>
                     </div>
                 </div>
@@ -902,6 +973,24 @@
             <p>&copy; 2025 Harsh Jannawar. All rights reserved.</p>
         </div>
     </footer>
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Resume</h2>
+                <a href="./assets/resume.pdf" download class="primary-button mini-button">Download PDF</a>
+            </div>
+            <div class="resume-viewer">
+                <!-- Using an iframe or object to show PDF, or a placeholder image if PDF is unavailable -->
+                <iframe src="./assets/resume.pdf" width="100%" height="100%" style="border: none;">
+                    <p>Your browser does not support iframes. <a href="./assets/resume.pdf">Click here to view the
+                            PDF.</a></p>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
