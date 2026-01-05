@@ -870,7 +870,7 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
         function draw() {
             // Subtle fade effect
             ctx.fillStyle = document.body.classList.contains('dark-mode')
-                ? 'rgba(2, 6, 23, 0.1)'
+                ? 'rgba(15, 23, 42, 0.1)'
                 : 'rgba(250, 250, 250, 0.1)';
             ctx.fillRect(0, 0, width, height);
 
@@ -881,9 +881,9 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
 
                 // Use theme-aware colors
                 if (document.body.classList.contains('dark-mode')) {
-                    ctx.fillStyle = 'rgba(16, 185, 129, 0.6)'; // Increased from 0.3
+                    ctx.fillStyle = 'rgba(70, 130, 169, 0.6)'; // Increased from 0.3
                 } else {
-                    ctx.fillStyle = 'rgba(16, 185, 129, 0.4)'; // Increased from 0.15
+                    ctx.fillStyle = 'rgba(70, 130, 169, 0.4)'; // Increased from 0.15
                 }
 
                 ctx.fillText(text, i * fontSize, drops[i] * fontSize);
