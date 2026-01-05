@@ -880,7 +880,7 @@
                             <svg viewBox="0 0 100 100" width="40" height="40">
                                 <circle cx="50" cy="50" r="45" fill="#4682A9" />
                                 <text x="50" y="60" font-family="Arial" font-size="24" fill="white"
-                                    text-anchor="middle">PA</text>
+                                    text-anchor="middle">HJ</text>
                             </svg>
                         </div>
                         <div class="online-indicator"></div>
@@ -982,11 +982,14 @@
                 <a href="./assets/resume.pdf" download class="primary-button mini-button">Download PDF</a>
             </div>
             <div class="resume-viewer">
-                <!-- Using an iframe or object to show PDF, or a placeholder image if PDF is unavailable -->
-                <iframe src="./assets/resume.pdf" width="100%" height="100%" style="border: none;">
-                    <p>Your browser does not support iframes. <a href="./assets/resume.pdf">Click here to view the
-                            PDF.</a></p>
-                </iframe>
+                <object data="./assets/resume.pdf" type="application/pdf" width="100%" height="100%">
+                    <div
+                        style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; text-align: center; padding: 2rem;">
+                        <p>Seems like your browser is blocking the PDF viewer.</p>
+                        <a href="./assets/resume.pdf" target="_blank" class="primary-button mini-button"
+                            style="margin-top: 1rem;">View Resume in New Tab</a>
+                    </div>
+                </object>
             </div>
         </div>
     </div>
