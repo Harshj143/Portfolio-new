@@ -665,6 +665,12 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
 
         // Function to send email via EmailJS
         function sendEmailNotification(userMessage, topic) {
+            // Check if emailjs is loaded and initialized
+            if (typeof emailjs === 'undefined') {
+                console.error('EmailJS is not loaded!');
+                return Promise.resolve(false);
+            }
+
             // Create proper subject based on topic
             const subjectMap = {
                 'discuss-project': 'Project Discussion - Portfolio Contact',
@@ -689,7 +695,10 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
                     return true;
                 })
                 .catch(function (error) {
-                    console.error('Failed to send email:', error);
+                    console.error('Failed to send email. Error object:', error);
+                    // Log more details if they exist
+                    if (error.text) console.error('Error text:', error.text);
+                    if (error.status) console.error('Error status:', error.status);
                     return false;
                 });
         }
@@ -786,6 +795,6 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
 
     // Run animations on scroll
     window.addEventListener('scroll', handleScrollAnimations);
-    
+
 
 });
