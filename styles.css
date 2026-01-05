@@ -1042,6 +1042,9 @@ body.dark-mode .description {
     background: linear-gradient(135deg, var(--light-accent), #5B9AC7);
     color: white !important;
     border: none !important;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
 }
 
 .resume-button:hover {
@@ -1947,6 +1950,12 @@ body.dark-mode .project-title {
     color: #64748b;
     transition: var(--transition-standard);
     text-decoration: none;
+}
+
+.project-image-ragbot {
+    background-image: url('assets/soc_ragbot_preview.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .project-link:hover {
