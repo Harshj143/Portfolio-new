@@ -881,9 +881,9 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
 
                 // Use theme-aware colors
                 if (document.body.classList.contains('dark-mode')) {
-                    ctx.fillStyle = 'rgba(70, 130, 169, 0.3)'; // Primary blue
+                    ctx.fillStyle = 'rgba(70, 130, 169, 0.6)'; // Increased from 0.3
                 } else {
-                    ctx.fillStyle = 'rgba(70, 130, 169, 0.15)';
+                    ctx.fillStyle = 'rgba(70, 130, 169, 0.4)'; // Increased from 0.15
                 }
 
                 ctx.fillText(text, i * fontSize, drops[i] * fontSize);
