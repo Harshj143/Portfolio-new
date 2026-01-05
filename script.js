@@ -846,12 +846,72 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
         });
     }
 
+    // ======= CYBERSECURITY BACKGROUND =======
+    function initCyberBackground() {
+        const canvas = document.getElementById('cyberCanvas');
+        if (!canvas) return;
+
+        const ctx = canvas.getContext('2d');
+        let width, height, columns;
+        const fontSize = 14;
+        const characters = '01abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()';
+        let drops = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            columns = Math.floor(width / fontSize);
+            drops = [];
+            for (let i = 0; i < columns; i++) {
+                drops[i] = Math.random() * -100;
+            }
+        }
+
+        function draw() {
+            // Subtle fade effect
+            ctx.fillStyle = document.body.classList.contains('dark-mode')
+                ? 'rgba(15, 23, 42, 0.1)'
+                : 'rgba(250, 250, 250, 0.1)';
+            ctx.fillRect(0, 0, width, height);
+
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = characters.charAt(Math.floor(Math.random() * characters.length));
+
+                // Use theme-aware colors
+                if (document.body.classList.contains('dark-mode')) {
+                    ctx.fillStyle = 'rgba(70, 130, 169, 0.3)'; // Primary blue
+                } else {
+                    ctx.fillStyle = 'rgba(70, 130, 169, 0.15)';
+                }
+
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i] += 0.5; // Slower rain
+            }
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+
+        function animate() {
+            draw();
+            requestAnimationFrame(animate);
+        }
+        animate();
+    }
+
     // ======= INITIALIZE ALL FUNCTIONS =======
     setupInteractiveTerminal();
     setupSkillCardAnimations();
     setupExperienceAnimations();
     initConversationalContact();
     setupResumeModal();
+    initCyberBackground();
 
     // Run animations on initial load
     handleScrollAnimations();
