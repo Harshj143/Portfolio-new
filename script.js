@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     emailjs.init('yRFOaFyNl8zfRdWtN');
 
     const EMAIL_CONFIG = {
-        serviceID: 'service_xoh64yo',
+        serviceID: 'service_e05khcs',
         templateID: 'template_znpc1en'
     };
     // ======= THEME TOGGLE FUNCTIONALITY WITH PERSISTENCE =======
@@ -337,7 +337,10 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
         });
 
         // Parallax effect for logos on scroll
-
+        function updateLogoParallax() {
+            // Function placeholder to fix ReferenceError
+            // You can add parallax logic here later if desired
+        }
 
         // Throttled scroll event for performance
         let scrollTimeout;
@@ -347,8 +350,6 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
             }
             scrollTimeout = window.requestAnimationFrame(updateLogoParallax);
         });
-
-
 
         // Magnetic effect on mouse move
         logos.forEach(logo => {
@@ -682,11 +683,11 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
             const subject = subjectMap[topic] || 'Portfolio Contact';
 
             const templateParams = {
+                name: 'Visitor via Portfolio Bot',
                 topic: subject,
                 message: userMessage,
-                timestamp: new Date().toLocaleString(),
-                from_email: window.userEmail || 'No email provided',
-                reply_to: window.userEmail || 'noreply@example.com'
+                time: new Date().toLocaleString(),
+                email: window.userEmail || 'No email provided'
             };
 
             return emailjs.send(EMAIL_CONFIG.serviceID, EMAIL_CONFIG.templateID, templateParams)
@@ -696,6 +697,7 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
                 })
                 .catch(function (error) {
                     console.error('Failed to send email. Error object:', error);
+                    window.lastEmailError = error; // Store for UI hints
                     // Log more details if they exist
                     if (error.text) console.error('Error text:', error.text);
                     if (error.status) console.error('Error status:', error.status);
@@ -754,7 +756,12 @@ When not working on projects, I enjoy competing in CTFs and exploring the latest
                                 }, 1000);
                             } else {
                                 setTimeout(() => {
-                                    addMessage("Sorry, there was an issue sending your message. Please try the email link below.", false, true, true);
+                                    let errorMsg = "Sorry, there was an issue sending your message.";
+                                    // Special hint if service ID is missing based on previous debug
+                                    if (window.lastEmailError && window.lastEmailError.status === 400) {
+                                        errorMsg += " (Service ID not found. Please check implementation_plan.md for help!)";
+                                    }
+                                    addMessage(errorMsg + " Please try the email link below.", false, true, true);
                                 }, 1000);
                             }
                         });
