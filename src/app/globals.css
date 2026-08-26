@@ -20,7 +20,7 @@
   --py: -9999;
   --lens: 104px;
   /* How long a bar takes to wipe away once the lens has swept it. */
-  --declassify: 1.5s;
+  --declassify: 1.1s;
   color-scheme: light;
 }
 
