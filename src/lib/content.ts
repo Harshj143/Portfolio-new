@@ -82,7 +82,7 @@ export const RECORD: Role[] = [
     stack: ["Python asyncio", "Docker", "AWS ECS / Lambda", "Nuclei", "Burp Suite", "MongoDB"],
   },
   {
-    org: "Pune Metro Rail Project", title: "Security Intern", place: "Pune, India",
+    org: "Pune Metro Rail", title: "Security Intern", place: "Pune, India",
     from: "Jun 2022", to: "Jul 2022", logo: "/metro.jpg",
     bullets: [
       "Reviewed IAM roles and security group configurations across 20+ cloud resources to identify over-permissive access and exposed services, recommending least-privilege changes that reduced the attack surface across 15+ findings.",
@@ -106,7 +106,7 @@ export const WORK: Project[] = [
       "Per-tool policy decisions on every agent call, fail-closed by default",
       "Defense-in-depth against prompt-injection exfiltration: PII/secret redaction with checksum-validated detectors and a tokenization vault",
       "Taint tracking, per-session risk scoring with auto-suspend, and an LLM behavioral anomaly monitor",
-      "200+ tests in CI; roadmap covers GitHub/Jira/Slack connector packs, OIDC via Okta/Auth0, policy-as-code CI/CD, and audit streaming to Splunk/S3",
+      "200+ tests in CI, with connector packs for GitHub/Jira/Slack, OIDC identity via Okta/Auth0, policy-as-code CI/CD, and audit streaming to Splunk/S3",
     ],
     stack: ["Python", "asyncio", "MCP", "YAML Policy", "SIEM"],
     href: "https://github.com/Harshj143/Inline-Proxy",
@@ -115,14 +115,14 @@ export const WORK: Project[] = [
   {
     n: "02", name: "AegisLLM", kind: "LLM Red-Team Suite", year: "2026", featured: true,
     line: "Automated security testing for LLM applications, mapped to the OWASP LLM Top 10.",
-    body: "A full offensive suite for language-model applications, including the ThreatForge Attack Suite for deeper penetration testing. Findings map directly to OWASP categories so they land as actionable security work rather than curiosities.",
+    body: "Runs thousands of injection and jailbreak prompts against a target, scores each one with LLM-as-a-Judge, and diffs the result against baseline models so a finding is a regression you can act on rather than a screenshot.",
     bullets: [
-      "Automated prompt testing for injection and jailbreaks",
-      "LLM-based judging to evaluate whether an injection actually succeeded",
-      "Determinism probing and rate-limit analysis",
-      "Configurable across OpenAI, Anthropic, and local models",
+      "Thousands of injection and jailbreak prompts, scored by LLM-as-a-Judge",
+      "Differential testing against baseline models to separate real findings from noise",
+      "ThreatForge — a genetic-algorithm prompt-evolution engine that breeds new attacks",
+      "Recon module fingerprints the target model, detects RAG, and enumerates connected tools",
     ],
-    stack: ["Python", "OWASP LLM Top 10", "Red Teaming"],
+    stack: ["Python", "Flask", "OWASP LLM Top 10"],
     href: "https://github.com/Harshj143/AegisLLM",
     image: "/fig-aegisllm.svg",
   },
@@ -212,7 +212,7 @@ export const CERTS = [
   "CompTIA PenTest+",
   "TCM Practical Ethical Hacking",
   "DevSecOps — TryHackMe",
-  "Certified LLM Security Expert — RTL",
+  "Certified LLM Security Expert",
   "Oracle Cloud Infrastructure Foundations",
 ];
 
