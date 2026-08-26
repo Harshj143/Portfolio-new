@@ -13,6 +13,17 @@ export const SUBJECT = {
   resume: "/resume.pdf",
 };
 
+/**
+ * Scheduling. Drop a Cal.com or Calendly event link into `url` and the
+ * "Book a call" actions light up everywhere; leave it empty and they fall
+ * back to email so the site never ships a dead button.
+ */
+export const BOOKING = {
+  url: "",
+  duration: "30 min",
+  blurb: "Intro call — roles, projects, or anything AI-security shaped.",
+};
+
 export const SUMMARY =
   "Security Engineer who builds secure, resilient systems and ships security tooling rather than just finding problems. Experienced across application security, detection engineering, cloud, and AI/LLM security, aligned with OWASP, MITRE ATT&CK, and NIST.";
 
@@ -99,6 +110,7 @@ export const WORK: Project[] = [
     ],
     stack: ["Python", "asyncio", "MCP", "YAML Policy", "SIEM"],
     href: "https://github.com/Harshj143/Inline-Proxy",
+    image: "/fig-inline-proxy.svg",
   },
   {
     n: "02", name: "AegisLLM", kind: "LLM Red-Team Suite", year: "2026", featured: true,
@@ -112,7 +124,7 @@ export const WORK: Project[] = [
     ],
     stack: ["Python", "OWASP LLM Top 10", "Red Teaming"],
     href: "https://github.com/Harshj143/AegisLLM",
-    image: "/aegisllm.png",
+    image: "/fig-aegisllm.svg",
   },
   {
     n: "03", name: "SOC RAGBot", kind: "Incident Investigation", year: "2026", featured: true,
@@ -126,7 +138,7 @@ export const WORK: Project[] = [
     ],
     stack: ["Python", "RAG", "LLM Ops"],
     href: "https://github.com/Harshj143/soc-ragbot",
-    image: "/soc_ragbot_preview.png",
+    image: "/fig-soc-ragbot.svg",
   },
   {
     n: "04", name: "Cloud Detection Engine", kind: "Detection Engineering", year: "2026",
@@ -199,15 +211,16 @@ export const CERTS = [
   "CompTIA Security+",
   "CompTIA PenTest+",
   "TCM Practical Ethical Hacking",
+  "DevSecOps — TryHackMe",
   "Certified LLM Security Expert — RTL",
   "Oracle Cloud Infrastructure Foundations",
 ];
 
 export const CAPABILITIES = [
-  { g: "Security", items: ["Security tool development", "Threat modeling", "Application security reviews", "Penetration testing", "Exploit development", "Secure code review", "AuthN & AuthZ"] },
-  { g: "Languages", items: ["Python", "JavaScript", "Node.js", "Bash", "SQL"] },
-  { g: "Frameworks", items: ["ISO 27001 / 42001", "NIST", "SOC 2", "OWASP", "MITRE ATT&CK", "asyncio", "YAML"] },
-  { g: "Tooling", items: ["Burp Suite", "Metasploit", "Nmap", "Nessus", "Nuclei", "OWASP ZAP", "IDA Pro", "Splunk", "Docker", "Git"] },
-  { g: "Cloud", items: ["AWS", "Azure", "Oracle Cloud", "ECR / ECS", "Lambda", "S3", "CloudTrail", "CloudWatch", "GuardDuty", "WAF"] },
+  { g: "Security", items: ["Security tool development", "Threat modeling", "Application security reviews", "Penetration testing", "Secure code review"] },
+  { g: "Languages", items: ["Python", "JavaScript", "Node.js", "Bash"] },
+  { g: "Frameworks", items: ["ISO 27001 / 42001", "NIST", "SOC 2", "OWASP", "MITRE ATT&CK"] },
+  { g: "Tooling", items: ["Burp Suite", "Metasploit", "Nmap", "Nuclei", "Splunk", "Docker"] },
+  { g: "Cloud", items: ["AWS", "Azure", "Lambda", "S3", "CloudTrail", "GuardDuty"] },
   { g: "Data", items: ["MongoDB", "Postgres", "SQL"] },
 ];

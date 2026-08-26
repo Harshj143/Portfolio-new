@@ -4,8 +4,8 @@ import { SUMMARY, BRIEF, CAPABILITIES, EDUCATION } from "@/lib/content";
 
 export function Brief() {
   return (
-    <section id="subject" className="pt-28 sm:pt-36">
-      <SectionHead n="01" title="Subject" note="Background" />
+    <section id="about" className="pt-28 sm:pt-36">
+      <SectionHead n="01" title="About" note="Subject file" />
 
       <div className="grid gap-x-10 gap-y-14 sm:grid-cols-12 pt-8">
         <div className="sm:col-span-7 sm:col-start-2">

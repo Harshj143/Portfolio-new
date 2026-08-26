@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Reveal, SectionHead } from "./Reveal";
 import { WORK, type Project } from "@/lib/content";
 
@@ -60,15 +59,17 @@ function Featured({ p }: { p: Project }) {
 
       <div className="sm:col-span-3 sm:col-start-10">
         {p.image && (
-          <div className="relative w-full aspect-[16/10] mb-5 overflow-hidden rounded-sm ring-1 ring-rule bg-paper-2">
-            <Image
+          <figure className="w-full mb-5 overflow-hidden rounded-sm ring-1 ring-rule bg-paper-2">
+            <img
               src={p.image}
-              alt={`${p.name} interface`}
-              fill
-              sizes="(max-width: 640px) 100vw, 24vw"
-              className="object-cover object-top"
+              alt={`${p.name} — schematic`}
+              width={400}
+              height={250}
+              className="block w-full h-auto"
+              loading="lazy"
+              decoding="async"
             />
-          </div>
+          </figure>
         )}
         <ul className="flex flex-col gap-2.5">
           {p.bullets.map((b, i) => (
@@ -125,7 +126,7 @@ export function Work() {
 
   return (
     <section id="work" className="pt-28 sm:pt-36">
-      <SectionHead n="03" title="Field Work" note={`${WORK.length} projects`} />
+      <SectionHead n="03" title="Projects" note={`${WORK.length} projects`} />
 
       <Reveal>
         <p className="display text-[clamp(1.5rem,3.2vw,2.4rem)] leading-[1.08] max-w-[24ch] pt-8 pb-4">

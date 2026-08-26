@@ -1,4 +1,5 @@
 import { RedactionField } from "@/components/Redaction";
+import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
 import { Brief } from "@/components/Brief";
 import { Record } from "@/components/Record";
@@ -32,14 +33,15 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD) }}
       />
+      <Nav />
       <a
-        href="#subject"
+        href="#about"
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-ink focus:text-paper focus:px-4 focus:py-2 focus:rounded-sm"
       >
         Skip to content
       </a>
 
-      <div id="top" className="relative z-10 px-5 sm:px-8 lg:px-14 max-w-[1600px] mx-auto">
+      <div id="top" className="relative z-10 [&_section]:scroll-mt-20 px-5 sm:px-8 lg:px-14 max-w-[1600px] mx-auto">
         <Hero />
         <main>
           <Brief />

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Agent tool calls pass through a policy gate; one is blocked">
+  <rect width="400" height="250" fill="#EDECE7"/>
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="8.5" fill="#86868C" letter-spacing=".08em">
+    <text x="16" y="22">AGENT</text>
+    <text x="171" y="22">POLICY GATE</text>
+    <text x="330" y="22">TOOLS</text>
+  </g>
+  <line x1="16" y1="30" x2="384" y2="30" stroke="#C6C5BE"/>
+
+  <g fill="none" stroke="#111112" stroke-width="1.2">
+    <rect x="16" y="52" width="76" height="146" rx="3"/>
+    <rect x="308" y="52" width="76" height="146" rx="3"/>
+  </g>
+  <rect x="163" y="44" width="74" height="162" rx="3" fill="#E4E3DD" stroke="#C2341D" stroke-width="1.4"/>
+
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="7.5" fill="#46464A">
+    <text x="176" y="62" fill="#C2341D" letter-spacing=".1em">RULES</text>
+    <text x="176" y="78">allow</text><text x="176" y="92">block</text>
+    <text x="176" y="106">redact</text><text x="176" y="120">rewrite</text>
+    <text x="176" y="134">quarantine</text><text x="176" y="148">approve</text>
+  </g>
+
+  <g stroke="#111112" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="92" y1="82" x2="163" y2="82"/><line x1="237" y1="82" x2="308" y2="82"/>
+    <line x1="92" y1="126" x2="163" y2="126"/><line x1="237" y1="126" x2="308" y2="126"/>
+    <line x1="92" y1="170" x2="163" y2="170"/>
+  </g>
+
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="7.5">
+    <text x="26" y="86" fill="#46464A">read_file</text>
+    <text x="26" y="130" fill="#46464A">http_get</text>
+    <text x="26" y="174" fill="#46464A">exec_sh</text>
+    <text x="318" y="86" fill="#46464A">fs</text>
+    <text x="318" y="130" fill="#46464A">net</text>
+    <text x="318" y="174" fill="#C2341D">&#8212;</text>
+  </g>
+
+  <circle cx="127" cy="82" r="3.4" fill="#111112"/>
+  <circle cx="272" cy="82" r="3.4" fill="#111112"/>
+  <circle cx="127" cy="126" r="3.4" fill="#111112"/>
+  <circle cx="272" cy="126" r="3.4" fill="#111112"/>
+  <circle cx="127" cy="170" r="3.4" fill="#C2341D"/>
+
+  <g stroke="#C2341D" stroke-width="1.8" stroke-linecap="round">
+    <path d="M194 165l12 12M206 165l-12 12"/>
+  </g>
+  <text x="200" y="193" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="7" fill="#C2341D" letter-spacing=".1em">BLOCKED</text>
+
+  <line x1="16" y1="218" x2="384" y2="218" stroke="#C6C5BE"/>
+  <text x="16" y="234" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="7.5" fill="#86868C">FAIL-CLOSED &#183; EVERY CALL INSPECTED &#183; DECIDED &#183; LOGGED</text>
+</svg>

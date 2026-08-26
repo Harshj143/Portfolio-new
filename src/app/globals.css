@@ -168,3 +168,6 @@ html.redact-on .redact > .bar { display: block; }
   writing-mode: vertical-rl;
   text-orientation: mixed;
 }
+
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

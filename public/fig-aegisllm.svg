@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Attack probes scored against OWASP LLM Top 10 categories">
+  <rect width="400" height="250" fill="#EDECE7"/>
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="8.5" fill="#86868C" letter-spacing=".08em">
+    <text x="16" y="22">OWASP LLM TOP 10 &#215; PROBES</text>
+  </g>
+  <line x1="16" y1="30" x2="384" y2="30" stroke="#C6C5BE"/>
+
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="7" fill="#86868C">
+    <text x="16" y="52">LLM01</text><text x="16" y="76">LLM02</text><text x="16" y="100">LLM04</text>
+    <text x="16" y="124">LLM06</text><text x="16" y="148">LLM07</text><text x="16" y="172">LLM09</text>
+  </g>
+
+  <g>
+    <!-- row 1 : prompt injection, heavy hits -->
+    <g fill="#C2341D"><rect x="58" y="43" width="17" height="11"/><rect x="79" y="43" width="17" height="11"/><rect x="121" y="43" width="17" height="11"/><rect x="184" y="43" width="17" height="11"/></g>
+    <g fill="#111112" opacity=".16"><rect x="100" y="43" width="17" height="11"/><rect x="142" y="43" width="17" height="11"/><rect x="163" y="43" width="17" height="11"/><rect x="205" y="43" width="17" height="11"/><rect x="226" y="43" width="17" height="11"/><rect x="247" y="43" width="17" height="11"/></g>
+    <!-- row 2 -->
+    <g fill="#C2341D"><rect x="100" y="67" width="17" height="11"/><rect x="163" y="67" width="17" height="11"/></g>
+    <g fill="#111112" opacity=".16"><rect x="58" y="67" width="17" height="11"/><rect x="79" y="67" width="17" height="11"/><rect x="121" y="67" width="17" height="11"/><rect x="142" y="67" width="17" height="11"/><rect x="184" y="67" width="17" height="11"/><rect x="205" y="67" width="17" height="11"/><rect x="226" y="67" width="17" height="11"/><rect x="247" y="67" width="17" height="11"/></g>
+    <!-- row 3 -->
+    <g fill="#C2341D"><rect x="79" y="91" width="17" height="11"/><rect x="205" y="91" width="17" height="11"/><rect x="226" y="91" width="17" height="11"/></g>
+    <g fill="#111112" opacity=".16"><rect x="58" y="91" width="17" height="11"/><rect x="100" y="91" width="17" height="11"/><rect x="121" y="91" width="17" height="11"/><rect x="142" y="91" width="17" height="11"/><rect x="163" y="91" width="17" height="11"/><rect x="184" y="91" width="17" height="11"/><rect x="247" y="91" width="17" height="11"/></g>
+    <!-- row 4 -->
+    <g fill="#C2341D"><rect x="142" y="115" width="17" height="11"/></g>
+    <g fill="#111112" opacity=".16"><rect x="58" y="115" width="17" height="11"/><rect x="79" y="115" width="17" height="11"/><rect x="100" y="115" width="17" height="11"/><rect x="121" y="115" width="17" height="11"/><rect x="163" y="115" width="17" height="11"/><rect x="184" y="115" width="17" height="11"/><rect x="205" y="115" width="17" height="11"/><rect x="226" y="115" width="17" height="11"/><rect x="247" y="115" width="17" height="11"/></g>
+    <!-- row 5 -->
+    <g fill="#C2341D"><rect x="58" y="139" width="17" height="11"/><rect x="247" y="139" width="17" height="11"/></g>
+    <g fill="#111112" opacity=".16"><rect x="79" y="139" width="17" height="11"/><rect x="100" y="139" width="17" height="11"/><rect x="121" y="139" width="17" height="11"/><rect x="142" y="139" width="17" height="11"/><rect x="163" y="139" width="17" height="11"/><rect x="184" y="139" width="17" height="11"/><rect x="205" y="139" width="17" height="11"/><rect x="226" y="139" width="17" height="11"/></g>
+    <!-- row 6 -->
+    <g fill="#111112" opacity=".16"><rect x="58" y="163" width="17" height="11"/><rect x="79" y="163" width="17" height="11"/><rect x="100" y="163" width="17" height="11"/><rect x="121" y="163" width="17" height="11"/><rect x="142" y="163" width="17" height="11"/><rect x="163" y="163" width="17" height="11"/><rect x="184" y="163" width="17" height="11"/><rect x="205" y="163" width="17" height="11"/><rect x="226" y="163" width="17" height="11"/><rect x="247" y="163" width="17" height="11"/></g>
+  </g>
+
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="7" fill="#46464A">
+    <rect x="288" y="43" width="9" height="9" fill="#C2341D"/><text x="303" y="51">injection landed</text>
+    <rect x="288" y="60" width="9" height="9" fill="#111112" opacity=".16"/><text x="303" y="68">held</text>
+    <text x="288" y="96" fill="#86868C" letter-spacing=".1em">JUDGE</text>
+    <text x="288" y="110">LLM-scored,</text><text x="288" y="121">not regex</text>
+    <text x="288" y="146" fill="#86868C" letter-spacing=".1em">PROBES</text>
+    <text x="288" y="160">10 &#215; 6 matrix</text>
+  </g>
+
+  <line x1="16" y1="196" x2="384" y2="196" stroke="#C6C5BE"/>
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="7.5">
+    <text x="16" y="212" fill="#86868C">DETERMINISM PROBE</text>
+    <text x="16" y="232" fill="#111112">temp drift 0.02 &#183; rate-limit 60/min &#183; 13 findings</text>
+  </g>
+</svg>
