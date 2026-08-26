@@ -76,14 +76,27 @@ export function Nav() {
             })}
           </ul>
 
-          <a
-            href={BOOKING.url || `mailto:${SUBJECT.email}`}
-            target={BOOKING.url ? "_blank" : undefined}
-            rel="noreferrer"
-            className="mono ml-auto shrink-0 hidden md:inline-flex items-center gap-2 border border-stamp text-stamp px-3 py-1.5 rounded-sm hover:bg-stamp hover:text-paper transition-colors duration-300"
-          >
-            Book a call
-          </a>
+          <div className="ml-auto shrink-0 flex items-center gap-2">
+            <a
+              href={SUBJECT.resume}
+              download="Harsh-Jannawar-Security-Engineer.pdf"
+              className="mono inline-flex items-center gap-1.5 text-ink-3 hover:text-ink border border-transparent hover:border-rule px-2.5 py-1.5 rounded-sm transition-colors duration-300"
+            >
+              <svg viewBox="0 0 16 16" className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M8 2v8m0 0L5 7m3 3l3-3M3 13h10" />
+              </svg>
+              <span className="hidden sm:inline">R&eacute;sum&eacute;</span>
+              <span className="sm:hidden">CV</span>
+            </a>
+            <a
+              href={BOOKING.url || `mailto:${SUBJECT.email}`}
+              target={BOOKING.url ? "_blank" : undefined}
+              rel="noreferrer"
+              className="mono hidden md:inline-flex items-center gap-2 border border-stamp text-stamp px-3 py-1.5 rounded-sm hover:bg-stamp hover:text-paper transition-colors duration-300"
+            >
+              Book a call
+            </a>
+          </div>
         </div>
       </div>
     </nav>

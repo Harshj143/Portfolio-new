@@ -3,11 +3,11 @@ import { Redacted } from "./Redaction";
 import { BookingEmbed } from "./BookingEmbed";
 import { SUBJECT } from "@/lib/content";
 
-const LINKS = [
+const LINKS: { label: string; value: string; href: string; download?: boolean }[] = [
   { label: "Email", value: SUBJECT.email, href: `mailto:${SUBJECT.email}` },
   { label: "LinkedIn", value: "harsh-jannawar", href: SUBJECT.linkedin },
   { label: "GitHub", value: "Harshj143", href: SUBJECT.github },
-  { label: "Résumé", value: "Download PDF", href: SUBJECT.resume },
+  { label: "Résumé", value: "Download PDF", href: SUBJECT.resume, download: true },
 ];
 
 export function Contact() {
@@ -33,8 +33,9 @@ export function Contact() {
           <Reveal key={l.label} delay={0.04 * i}>
             <a
               href={l.href}
-              target={l.href.startsWith("mailto:") ? undefined : "_blank"}
-              rel="noreferrer"
+              {...(l.download
+                ? { download: "Harsh-Jannawar-Security-Engineer.pdf" }
+                : { target: l.href.startsWith("mailto:") ? undefined : "_blank", rel: "noreferrer" })}
               className="group flex flex-col gap-1 bg-paper p-6 h-full transition-colors duration-300 hover:bg-ink hover:text-paper"
             >
               <span className="mono text-ink-3 group-hover:text-paper-3 transition-colors duration-300">
