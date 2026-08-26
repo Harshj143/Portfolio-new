@@ -8,7 +8,7 @@ export function Hero() {
       <div className="flex items-start justify-between gap-6 rise" style={{ animationDelay: ".05s" }}>
         <div className="mono text-ink-3 leading-relaxed">
           <div>File {SUBJECT.fileNo}</div>
-          <div>Clearance &mdash; {SUBJECT.clearance}</div>
+          <div>Clearance: {SUBJECT.clearance}</div>
         </div>
         <div className="stamp mono text-[.6rem] sm:text-[.688rem] rotate-[2.5deg] shrink-0">
           Declassify by hand
@@ -38,7 +38,7 @@ export function Hero() {
         >
           <p className="sm:col-span-5 sm:col-start-2 text-[1.32rem] sm:text-[1.6rem] leading-[1.28] tracking-[-.018em]">
             {SUBJECT.role} working on{" "}
-            <Redacted>application &amp; AI security</Redacted> &mdash; building the
+            <Redacted>application &amp; AI security</Redacted>, building the
             guardrails between <Redacted>AI agents</Redacted> and the damage they can do.
           </p>
           <p className="sm:col-span-4 sm:col-start-9 text-ink-2 text-[.95rem] leading-[1.62] self-end">

@@ -7,7 +7,7 @@ export function Footer() {
         <span>
           &copy; {new Date().getFullYear()} {SUBJECT.first} {SUBJECT.last}
         </span>
-        <span>File {SUBJECT.fileNo} &mdash; end of document</span>
+        <span>File {SUBJECT.fileNo}, end of document</span>
         <a href="#top" className="hover:text-ink transition-colors duration-300">
           Back to top &uarr;
         </a>

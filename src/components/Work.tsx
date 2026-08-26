@@ -62,7 +62,7 @@ function Featured({ p }: { p: Project }) {
           <figure className="w-full mb-5 overflow-hidden rounded-sm ring-1 ring-rule bg-paper-2">
             <img
               src={p.image}
-              alt={`${p.name} — schematic`}
+              alt={`${p.name} schematic`}
               width={400}
               height={250}
               className="block w-full h-auto"

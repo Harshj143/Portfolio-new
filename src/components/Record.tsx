@@ -6,7 +6,7 @@ import { RECORD } from "@/lib/content";
 export function Record() {
   return (
     <section id="experience" className="pt-28 sm:pt-36">
-      <SectionHead n="02" title="Experience" note="2022 — 2025" />
+      <SectionHead n="02" title="Experience" note="2022–2025" />
 
       <div className="pt-8">
         {RECORD.map((r, i) => (
@@ -14,7 +14,7 @@ export function Record() {
             <article className="grid gap-x-10 gap-y-5 sm:grid-cols-12 py-9 border-t border-rule first:border-t-0">
               <div className="sm:col-span-3">
                 <div className="mono text-ink-3">
-                  {r.from} &mdash; {r.to}
+                  {r.from} &ndash; {r.to}
                 </div>
                 <div className="flex items-center gap-3 pt-3">
                   {r.logo && (
@@ -65,7 +65,7 @@ export function Record() {
 
       <Reveal>
         <p className="mono text-ink-3 pt-6">
-          Full history in the <Redacted>résumé</Redacted> &mdash; linked below.
+          Full history in the <Redacted>résumé</Redacted>, linked below.
         </p>
       </Reveal>
     </section>

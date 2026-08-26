@@ -40,7 +40,7 @@ export function Brief() {
                   </div>
                   <div className="mono text-ink-3 text-right">
                     <div>
-                      {e.from} &mdash; {e.to}
+                      {e.from} &ndash; {e.to}
                     </div>
                     <div className="text-stamp pt-0.5">{e.detail}</div>
                   </div>
