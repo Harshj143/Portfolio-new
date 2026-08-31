@@ -37,6 +37,7 @@ export function Brief() {
                   <div>
                     <div className="font-semibold leading-tight">{e.school}</div>
                     <div className="text-[.92rem] text-ink-2 pt-0.5">{e.degree}</div>
+                    <div className="mono text-ink-3 pt-1">{e.place}</div>
                   </div>
                   <div className="mono text-ink-3 text-right">
                     <div>

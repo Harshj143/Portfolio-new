@@ -33,17 +33,19 @@ export const SUMMARY =
 export const BRIEF = [
   "Most of what I build answers one question: how do you let an AI system be genuinely useful without letting it be dangerous? That has become a transparent MCP proxy that enforces per-tool policy on every agent call, a red-team suite mapped to the OWASP LLM Top 10, and a SOC assistant that writes incident reports from playbooks and raw logs.",
   "At SecureAIs I ran adversarial testing against production AI platforms and found 20+ critical issues including authentication bypass, prompt injection, and token leakage before any of it shipped, then built the PII detection and redaction pipeline that pushed sensitive-data protection accuracy from 65% to 95%.",
-  "At SecureThings I spent a year on the build side: an event-driven scanning platform in Dockerized async Python that cut asset analysis from nine hours to under thirty minutes, backend risk-scoring logic to prioritize what actually mattered, and AWS/Azure hardening across 25+ security gaps.",
+  "At SecureThings I spent a year on the build side: an event-driven scanning platform in Dockerized async Python that cut asset analysis from nine hours to under thirty minutes, a lightweight telemetry agent for devices with almost no RAM to spare, and AWS/Azure hardening across 25+ security gaps.",
+  "My M.S. thesis at the University of Washington, an AI Security Compliance and Testing Framework for LLM Systems, is published through ProQuest.",
   "Off the clock: CTFs with UWB GreyHats, cloud hardening rabbit holes, and writing up what breaks.",
 ];
 
-export type Edu = { school: string; degree: string; detail: string; from: string; to: string };
+export type Edu = { school: string; degree: string; detail: string; place: string; from: string; to: string };
 
 export const EDUCATION: Edu[] = [
   {
     school: "University of Washington",
     degree: "M.S. Cybersecurity Engineering",
     detail: "GPA 3.93 / 4.00",
+    place: "Seattle, WA",
     from: "Sep 2024",
     to: "Jun 2026",
   },
@@ -51,6 +53,7 @@ export const EDUCATION: Edu[] = [
     school: "Symbiosis Skills and Professional University",
     degree: "B.Tech, CSIT (Cybersecurity)",
     detail: "GPA 3.65 / 4.00",
+    place: "Pune, India",
     from: "Aug 2020",
     to: "May 2024",
   },
@@ -66,10 +69,10 @@ export const RECORD: Role[] = [
     org: "SecureAIs", title: "AI Cybersecurity Engineering Intern", place: "California, USA",
     from: "Jun 2025", to: "Aug 2025", logo: "/secureais_logo.png",
     bullets: [
-      "Developed a PII detection and redaction pipeline using Presidio, regex-based validation, and packet analysis to protect sensitive data across 10k test samples, improving sensitive-data protection accuracy from 65% to 95%.",
-      "Conducted adversarial testing and secure code reviews across AI platforms to uncover 20+ critical vulnerabilities including authentication bypass, prompt injection, and token leakage prior to production release.",
-      "Integrated SAST, DAST, dependency scanning, and secret detection into CI/CD pipelines to give continuous security feedback during development, reducing security review cycles by 60%.",
-      "Built and tested end-to-end authentication flows across engineering services, covering secure login, session handling, token validation, role-based access control, and protected API routes, to reduce unauthorized access risk across application workflows.",
+      "Drove 40+ paying users by improving data protection accuracy from 65% to 95%: developed a PII detection and redaction pipeline using Presidio, regex-based validation, and packet analysis across 10k test samples.",
+      "Reduced security review cycles by 60% through CI/CD automation: integrated SAST, DAST, dependency scanning, and secret detection into engineering pipelines to give continuous security feedback during development.",
+      "Identified 20+ critical vulnerabilities across AI platforms: ran adversarial testing and secure code reviews to uncover authentication bypass, prompt injection, and token leakage prior to production release.",
+      "Implemented end-to-end authentication flows across engineering services: built and tested secure login, session handling, token validation, role-based access control, and protected API routes to reduce unauthorized access risk.",
     ],
     stack: ["Presidio", "Adversarial Testing", "SAST / DAST", "CI/CD", "AuthN / AuthZ"],
   },
@@ -77,20 +80,21 @@ export const RECORD: Role[] = [
     org: "SecureThings", title: "Security Analyst Intern", place: "Pune, India",
     from: "Jun 2023", to: "May 2024", logo: "/Securethings-Logo.jpg",
     bullets: [
-      "Built an event-driven scanning platform using Dockerized asynchronous Python, Nmap, and Nuclei, deployed via Amazon ECR and ECS, persisted to S3 and MongoDB, and triggered by AWS Lambda on new user requests, cutting asset analysis time from 9+ hours to under 30 minutes.",
-      "Performed application and infrastructure security assessments using Nessus, Nmap, and Burp Suite to triage 15+ high-severity vulnerabilities with validated exploits.",
-      "Designed backend risk-scoring logic to prioritize findings by exploitability, exposed services, affected technologies, severity, and business context for faster remediation decisions.",
-      "Strengthened AWS and Azure environments by improving IAM permissions, container security controls, secrets handling, and exposed service configurations, remediating 25+ cloud and application security gaps.",
+      "Cut asset analysis time from 9+ hours to under 30 minutes: built an event-driven scanning platform with Dockerized asynchronous Python workflows running Nmap and Nuclei, deployed via AWS Lambda and ECS, normalizing findings against CVE, CWE, and EDB-ID before storing them in MongoDB and S3.",
+      "Built a lightweight device monitoring tool for resource-constrained security telemetry: data collection agents in Python and Bash for devices with limited RAM and storage, streaming logs to an EC2-hosted pipeline, with a dashboard to analyze security events.",
+      "Triaged 15+ high-severity vulnerabilities with validated exploits: performed application and infrastructure security assessments using Nessus, Nmap, and Burp Suite.",
+      "Remediated 25+ cloud and application security gaps: strengthened AWS and Azure environments through IAM permissions, container security controls, secrets handling, and exposed service configurations.",
     ],
-    stack: ["Python asyncio", "Docker", "AWS ECS / Lambda", "Nuclei", "Burp Suite", "MongoDB"],
+    stack: ["Python asyncio", "Docker", "AWS Lambda / ECS", "Nuclei", "Burp Suite", "MongoDB"],
   },
   {
-    org: "Pune Metro Rail", title: "Security Intern", place: "Pune, India",
+    org: "Pune Metro Rail Project", title: "Security Intern", place: "Pune, India",
     from: "Jun 2022", to: "Jul 2022", logo: "/metro.jpg",
     bullets: [
-      "Reviewed IAM roles and security group configurations across 20+ cloud resources to identify over-permissive access and exposed services, recommending least-privilege changes that reduced the attack surface across 15+ findings.",
+      "Reduced attack surface across 15+ findings: reviewed IAM roles and security group configurations across 20+ cloud resources, identifying over-permissive access and exposed services and recommending least-privilege changes.",
+      "Improved audit readiness and incident response coverage by 30%: mapped 12+ controls to monitoring signals in CloudWatch and GuardDuty, supporting alignment with ISO/IEC 27001:2022 and the NIST Cybersecurity Framework.",
     ],
-    stack: ["AWS", "IAM", "Cloud Review"],
+    stack: ["AWS", "IAM", "CloudWatch", "GuardDuty", "ISO 27001", "NIST CSF"],
   },
 ];
 
@@ -102,14 +106,14 @@ export type Project = {
 
 export const WORK: Project[] = [
   {
-    n: "01", name: "Inline Proxy", kind: "Security Gateway for AI Agents", year: "2026–Present", featured: true,
+    n: "01", name: "Inline Proxy", kind: "Security Gateway for AI Agents", year: "2026", featured: true,
     line: "A transparent MCP proxy that enforces policy on every tool call an agent makes.",
-    body: "Role-aware policy on every tool: allow, block, redact, rewrite, quarantine, or route to human approval. The decision happens before an action runs rather than after. Fail-closed by default, with a pluggable asyncio pipeline and layered YAML policy packs.",
+    body: "Role-aware policy on every tool: allow, block, redact, or route to human approval. The decision happens before an action runs rather than after, which is what lets it break the prompt-injection exfiltration chain instead of just recording it.",
     bullets: [
-      "Per-tool policy decisions on every agent call, fail-closed by default",
-      "Defense-in-depth against prompt-injection exfiltration: PII/secret redaction with checksum-validated detectors and a tokenization vault",
-      "Taint tracking, per-session risk scoring with auto-suspend, and an LLM behavioral anomaly monitor",
-      "200+ tests in CI, with connector packs for GitHub/Jira/Slack, OIDC identity via Okta/Auth0, policy-as-code CI/CD, and audit streaming to Splunk/S3",
+      "Blocks the full prompt-injection exfiltration chain, verified end to end: taint tracking stops a poisoned GitHub issue from publishing a repo's .env",
+      "194 tools policed at roughly 0.1 ms p99, with 0% false positives across 200+ real tool descriptions",
+      "Default-deny policy packs for GitHub, Jira, and Slack, each extracted from upstream server source",
+      "OIDC identity, Ed25519-signed policy bundles, and SIEM audit streaming to Splunk and S3",
     ],
     stack: ["Python", "asyncio", "MCP", "YAML Policy", "SIEM"],
     href: "https://github.com/Harshj143/Inline-Proxy",
@@ -205,7 +209,8 @@ export const WORK: Project[] = [
 ];
 
 export const COMMENDATIONS = [
-  { k: "Top 1%", t: "TryHackMe", d: "Ranked in the top one percent globally across offensive and defensive challenges." },
+  { k: "Published", t: "M.S. Thesis, University of Washington", d: "AI Security Compliance and Testing Framework for LLM Systems. ProQuest Dissertations & Theses, 32738510." },
+  { k: "Top 1%", t: "TryHackMe", d: "Ranked in the top one percent globally, across DevSecOps, penetration testing, red team, and blue team paths." },
   { k: "Winner", t: "Capture The Flag, UWB GreyHats", d: "Won the UW Bothell GreyHats CTF competition in applied exploitation and forensics." },
   { k: "Author", t: "Published on Medium", d: "Writes cybersecurity and technical blogs on AI security, cloud, and offensive tooling." },
 ];
@@ -213,17 +218,16 @@ export const COMMENDATIONS = [
 export const CERTS = [
   "CompTIA Security+",
   "CompTIA PenTest+",
-  "TCM Practical Ethical Hacking",
   "DevSecOps (TryHackMe)",
-  "Certified LLM Security Expert",
+  "TCM Practical Ethical Hacking",
   "Oracle Cloud Infrastructure Foundations",
 ];
 
 export const CAPABILITIES = [
-  { g: "Security", items: ["Security tool development", "Threat modeling", "Application security reviews", "Penetration testing", "Secure code review"] },
-  { g: "Languages", items: ["Python", "JavaScript", "Node.js", "Bash"] },
-  { g: "Frameworks", items: ["ISO 27001 / 42001", "NIST", "SOC 2", "OWASP", "MITRE ATT&CK"] },
-  { g: "Tooling", items: ["Burp Suite", "Metasploit", "Nmap", "Nuclei", "Splunk", "Docker"] },
-  { g: "Cloud", items: ["AWS", "Azure", "Lambda", "S3", "CloudTrail", "GuardDuty"] },
+  { g: "Security", items: ["Security development", "Threat modeling", "Application security", "Penetration testing", "Secure code review", "DevSecOps", "Vulnerability management", "Detection engineering"] },
+  { g: "Languages", items: ["Python", "TypeScript", "JavaScript", "Node.js", "Bash", "SQL"] },
+  { g: "Frameworks", items: ["ISO 27001 / 42001", "NIST", "SOC 2", "OWASP Top 10"] },
+  { g: "Tools", items: ["Burp Suite", "Nmap", "Nessus", "Nuclei", "Metasploit", "Splunk", "Git"] },
+  { g: "Cloud", items: ["AWS", "Lambda", "S3", "Docker", "Container security", "IAM"] },
   { g: "Data", items: ["MongoDB", "Postgres", "SQL"] },
 ];
