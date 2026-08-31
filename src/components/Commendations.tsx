@@ -12,7 +12,7 @@ export function Commendations() {
             {COMMENDATIONS.map((c, i) => (
               <Reveal key={c.t} delay={0.05 * i}>
                 <div className="flex flex-wrap items-baseline gap-x-6 gap-y-2 py-6 border-t border-rule">
-                  <span className="display text-[clamp(1.4rem,3.2vw,2.2rem)] text-stamp shrink-0 sm:w-[13.5rem]" style={{ lineHeight: 1.1 }}>
+                  <span className="display text-[clamp(1.4rem,3.2vw,2.2rem)] text-stamp shrink-0 sm:w-[8.2em]" style={{ lineHeight: 1.1 }}>
                     {c.k}
                   </span>
                   <div className="min-w-[16rem] flex-1">
