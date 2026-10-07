@@ -68,7 +68,7 @@ export type Role = {
 export const RECORD: Role[] = [
   {
     org: "Cyber Alliance", title: "AI Security Engineer", place: "Raleigh, North Carolina",
-    from: "Sep 2026", to: "Present",
+    from: "Sep 2026", to: "Present", logo: "/cyberalliance_logo.jpg",
     bullets: [
       "Led a team of 3 engineers building Sally, a security platform for small and mid-size organizations, reviewing their PRs before production for security and data-integrity defects, and setting up the guardrails that let them ship through reviewed PRs without AWS access.",
       "Built an org-specific threat-intelligence pipeline ingesting 12 scheduled feeds (CISA KEV, EPSS), geo-tagging indicators, and filtering threats by each organization's region, industry, and tech stack with plain-English impact summaries.",
