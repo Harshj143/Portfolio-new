@@ -31,6 +31,7 @@ export const SUMMARY =
   "Security Engineer who builds secure, resilient systems and ships security tooling rather than just finding problems. Experienced across application security, detection engineering, cloud, and AI/LLM security, aligned with OWASP, MITRE ATT&CK, and NIST.";
 
 export const BRIEF = [
+  "Right now I'm an AI Security Engineer at Cyber Alliance, leading a team of three engineers building Sally, a security platform for small and mid-size organizations. That means threat intelligence filtered to each organization's region, industry, and stack, an agentic security assistant hardened against prompt injection, and the AWS infrastructure underneath it all, taken from nothing to production.",
   "Most of what I build answers one question: how do you let an AI system be genuinely useful without letting it be dangerous? That has become a transparent MCP proxy that enforces per-tool policy on every agent call, a red-team suite mapped to the OWASP LLM Top 10, and a SOC assistant that writes incident reports from playbooks and raw logs.",
   "At SecureAIs I ran adversarial testing against production AI platforms and found 20+ critical issues including authentication bypass, prompt injection, and token leakage before any of it shipped, then built the PII detection and redaction pipeline that pushed sensitive-data protection accuracy from 65% to 95%.",
   "At SecureThings I spent a year on the build side: an event-driven scanning platform in Dockerized async Python that cut asset analysis from nine hours to under thirty minutes, a lightweight telemetry agent for devices with almost no RAM to spare, and AWS/Azure hardening across 25+ security gaps.",
@@ -65,6 +66,20 @@ export type Role = {
 };
 
 export const RECORD: Role[] = [
+  {
+    org: "Cyber Alliance", title: "AI Security Engineer", place: "Raleigh, North Carolina",
+    from: "Sep 2026", to: "Present",
+    bullets: [
+      "Led a team of 3 engineers building Sally, a security platform for small and mid-size organizations, reviewing their PRs before production for security and data-integrity defects, and setting up the guardrails that let them ship through reviewed PRs without AWS access.",
+      "Built an org-specific threat-intelligence pipeline ingesting 12 scheduled feeds (CISA KEV, EPSS), geo-tagging indicators, and filtering threats by each organization's region, industry, and tech stack with plain-English impact summaries.",
+      "Built an agentic security assistant with a 7-tool calling loop grounded in live scan findings, posture, and assessment data, hardening it against hallucination with severity-sorted, size-capped tool output and against prompt injection.",
+      "Delivered full-stack vulnerability scanning with web, network, and ZAP active scans, Semgrep and Trivy source-code scanning, and a NIST-based weighted risk assessment, generating Executive, Technical, and Compliance PDF reports from a shared pipeline.",
+      "Built org-scoped RBAC (Owner/Admin/Member across 13 capabilities) enforced server-side at 26 endpoints with Auth0, role-based MFA, and fail-secure step-up MFA before irreversible actions, closing privilege-escalation gaps and covered by ~97 tests.",
+      "Took the platform from nothing to production on AWS with ~210 Terraform/Pulumi-managed resources (VPC, ECS Fargate, RDS, KMS) and GitHub Actions CI/CD using OIDC with no stored keys, shipping 80+ verified releases and authoring 195 of 236 merged PRs across 8 repos.",
+      "Built GitHub Actions build, push-to-ECR, and deploy pipelines that authenticate to AWS through OIDC with no stored keys, auto-triggering ECS rollouts on promotion. Added branch protection, Codeowner, and a main-to-prod release model across repos, and stood up CI/CD for services that had none, shipping 80+ verified production releases with rollback safety.",
+    ],
+    stack: ["Agentic AI", "Threat Intelligence", "AWS ECS / RDS / KMS", "Terraform / Pulumi", "GitHub Actions OIDC", "Auth0", "Semgrep / Trivy"],
+  },
   {
     org: "SecureAIs", title: "AI Cybersecurity Engineering Intern", place: "California, USA",
     from: "Jun 2025", to: "Aug 2025", logo: "/secureais_logo.png",

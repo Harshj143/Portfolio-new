@@ -42,9 +42,9 @@ export function Hero() {
             guardrails between <Redacted>AI agents</Redacted> and the damage they can do.
           </p>
           <p className="sm:col-span-4 sm:col-start-9 text-ink-2 text-[.95rem] leading-[1.62] self-end">
-            M.S. Cybersecurity Engineering at the University of Washington.
-            Previously <Redacted>SecureAIs</Redacted>,{" "}
-            <Redacted>SecureThings</Redacted>, and the Pune Metro Rail Project.
+            AI Security Engineer at <Redacted>Cyber Alliance</Redacted>. M.S.
+            Cybersecurity Engineering, University of Washington. Previously{" "}
+            <Redacted>SecureAIs</Redacted> and SecureThings.
           </p>
         </div>
       </div>

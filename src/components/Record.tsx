@@ -6,7 +6,7 @@ import { RECORD } from "@/lib/content";
 export function Record() {
   return (
     <section id="experience" className="pt-28 sm:pt-36">
-      <SectionHead n="02" title="Experience" note="2022–2025" />
+      <SectionHead n="02" title="Experience" note="2022–Present" />
 
       <div className="pt-8">
         {RECORD.map((r, i) => (
